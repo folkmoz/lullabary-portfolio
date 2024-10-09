@@ -4,8 +4,13 @@ import HeadlineRow from "~components/Sections/experiences/components/HeadlineRow
 import useImagePreloader from "~hooks/useImagePreloader";
 import Animation from "~components/AnimatedComponents/Animation";
 import VideoPlayer from "~components/Sections/experiences/components/Videoplayer";
-import clip from "~assets/experience/exbear/clip/clip.mp4";
 import FullLinkButton from "~components/Sections/experiences/components/FullLinkButton";
+import CustomSwiper from "~components/Sections/experiences/components/CustomSwiper";
+import { useScreen } from "~hooks/useScreen";
+import { Parallax } from "~components/AnimatedComponents/Parallax";
+import Bubble from "~components/Bubble";
+
+import clip from "~assets/experience/exbear/clip/clip.mp4";
 
 import hFishTank from "~assets/experience/exbear/pics/h-fish-tank.png";
 import vFishTank from "~assets/experience/exbear/pics/v-fish-tank.png";
@@ -13,13 +18,19 @@ import bh01 from "~assets/experience/exbear/pics/bh01.jpeg";
 import bh02 from "~assets/experience/exbear/pics/bh02.jpeg";
 import bh03 from "~assets/experience/exbear/pics/bh03.jpeg";
 import bh04 from "~assets/experience/exbear/pics/bh04.jpeg";
-import CustomSwiper from "~components/Sections/experiences/components/CustomSwiper";
-import { useScreen } from "~hooks/useScreen";
-import { Parallax } from "~components/AnimatedComponents/Parallax";
-import Bubble from "~components/Bubble";
+import starCoral from "~assets/experience/exbear/pics/star-coral.webp";
 
 function Exbear() {
-  useImagePreloader([backgroundSec3, hFishTank, bh01, bh02, bh03, bh04]);
+  useImagePreloader([
+    backgroundSec3,
+    hFishTank,
+    vFishTank,
+    bh01,
+    bh02,
+    bh03,
+    bh04,
+    starCoral,
+  ]);
 
   const { device } = useScreen();
 
@@ -27,7 +38,7 @@ function Exbear() {
     <div
       style={{
         backgroundImage: `url(${backgroundSec3})`,
-        zIndex: 0,
+        zIndex: 2,
       }}
       className="shadow-custom-b relative min-h-dvh bg-cover bg-no-repeat pb-[50dvh] lg:pb-0"
     >
@@ -42,7 +53,7 @@ tones to convey the charm of the girl we secretly admire but I didn’t want it 
 and blue to give it a cooler style."
         />
 
-        <div className="relative flex min-h-dvh flex-col gap-4 lg:flex-row lg:gap-8">
+        <div className="relative z-[2] flex min-h-dvh flex-col gap-4 lg:flex-row lg:gap-8">
           <img
             src={device === "desktop" ? hFishTank : vFishTank}
             alt=""
@@ -60,7 +71,7 @@ and blue to give it a cooler style."
               <div className="w-full items-center lg:flex lg:w-1/3">
                 <div className="absolute -bottom-20 left-0 right-0 flex scale-150 justify-center lg:relative lg:ml-24 lg:block lg:scale-100">
                   <FullLinkButton
-                    href={"https://www.youtube.com/watch?v=AwM9Lxup52o"}
+                    href={"https://www.youtube.com/watch?v=S5QYZaLa1lQ"}
                   />
                 </div>
               </div>
@@ -77,8 +88,40 @@ and blue to give it a cooler style."
         </div>
       </div>
 
-      <Parallax className="absolute -bottom-24 left-0 z-[1] size-[300px]">
+      <Parallax
+        speed={1.2}
+        start="top bottom"
+        end="bottom top"
+        className="absolute left-10 top-[30%] z-[2] size-20"
+      >
+        <Bubble type="bubble-fill" drag={false} />
+      </Parallax>
+
+      <Parallax
+        speed={2}
+        start="top bottom"
+        className="absolute bottom-1/2 left-20 z-[2] size-20 md:bottom-[30%] md:size-40"
+      >
+        <Bubble type="bubble-fill" drag={false} />
+      </Parallax>
+
+      <Parallax className="absolute bottom-10 left-0 z-[1] size-[300px]">
         <Bubble type="red-bubble" drag={false} />
+      </Parallax>
+
+      <Parallax
+        speed={2.3}
+        start="top bottom"
+        className="absolute bottom-1/2 right-20 z-[2] size-20 md:bottom-[30%] lg:right-[30%]"
+      >
+        <Bubble type="bubble-fill" drag={false} />
+      </Parallax>
+
+      <Parallax
+        speed={1.3}
+        className="absolute -bottom-48 right-0 z-[1] size-[300px] lg:-right-64 lg:size-[600px] lg:scale-110"
+      >
+        <img src={starCoral} alt="pink star coral" />
       </Parallax>
     </div>
   );
