@@ -121,7 +121,7 @@ export class SplitText {
           "",
           {
             style:
-              "position:relative; display:inline-block; overflow:hidden; white-space:nowrap;",
+              "position:relative; display:inline-block; overflow:hidden; white-space:nowrap; will-change:transform;",
           },
           `line-wrapper`,
         );

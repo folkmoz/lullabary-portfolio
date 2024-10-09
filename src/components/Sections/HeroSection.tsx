@@ -184,7 +184,7 @@ function HeroSection({
           <h1
             ref={textHeadingRef}
             className={cn(
-              "overflow-hidden text-center font-le-murmure text-8xl font-bold uppercase leading-none md:text-[16vw]",
+              "overflow-hidden text-center font-le-murmure text-8xl font-bold uppercase leading-none will-change-auto md:text-[16vw]",
               !config.isPreview && "opacity-0",
             )}
           >
@@ -252,7 +252,7 @@ function HeroSection({
       <div
         ref={fish2Ref}
         className={cn(
-          "pointer-events-none absolute -left-[5rem] top-[10%] z-0 size-[400px] -rotate-45 select-none",
+          "pointer-events-none absolute -left-[5rem] top-[10%] z-0 size-[400px] -rotate-45 select-none will-change-transform",
           "sm:size-[500px]",
           "md:-left-[2.5rem] md:size-[600px]",
           "lg:left-[-2rem]",
@@ -266,7 +266,7 @@ function HeroSection({
       <div
         ref={fish1Ref}
         className={cn(
-          "pointer-events-none absolute -right-[100%] top-[40%] size-[600px] -rotate-45 select-none",
+          "pointer-events-none absolute -right-[100%] top-[40%] size-[600px] -rotate-45 select-none will-change-transform",
           "md:-right-[70%] md:top-[30%] md:size-[1000px]",
           "lg:-right-[25%] lg:top-[40%]",
           "xl:size-[1000px] 2xl:size-[1200px]",

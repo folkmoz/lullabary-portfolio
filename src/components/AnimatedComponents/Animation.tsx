@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "~/lib/utils/splitText";
 import { useScreen } from "~hooks/useScreen";
+import { config } from "~/config";
 
 const Animation = () => {};
 
@@ -84,7 +85,7 @@ Animation.TextReveal = function Animation({
 
       const splitText = new SplitText(ref.current);
 
-      return;
+      if (config.isPreview) return;
 
       gsap.from(splitText.lines, {
         duration: 1,
@@ -127,7 +128,8 @@ Animation.ImageReveal = function Animation({
   const { device } = useScreen();
 
   useGSAP(() => {
-    return;
+    if (config.isPreview) return;
+
     if (!device || device === "mobile") {
       return;
     }

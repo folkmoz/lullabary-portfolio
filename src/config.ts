@@ -1,3 +1,3 @@
 export const config = {
-  isPreview: true,
+  isPreview: false,
 };

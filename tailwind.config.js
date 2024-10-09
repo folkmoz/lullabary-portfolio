@@ -6,7 +6,7 @@ export default {
       colors: {
         primary: "#3E7496",
         secondary: "#ECEDD0",
-        red: "#A41D1E",
+        "red-custom": "#A41D1E",
       },
       fontFamily: {
         wagon: ["Wagon", "sans-serif"],

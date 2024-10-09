@@ -60,7 +60,9 @@ export function Parallax({
 
   return (
     <div ref={trigger} className={className}>
-      <div ref={target}>{children}</div>
+      <div ref={target} className="will-change-transform">
+        {children}
+      </div>
     </div>
   );
 }

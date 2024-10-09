@@ -17,7 +17,7 @@ function Headline({
     <h2
       className={cn(
         "relative ml-16 w-fit font-andalos text-3xl font-bold md:text-4xl xl:text-6xl",
-        isRedStar ? "text-red" : "text-[#EF8995]",
+        isRedStar ? "text-red-custom" : "text-[#EF8995]",
       )}
     >
       {children}

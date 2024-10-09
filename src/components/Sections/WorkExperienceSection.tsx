@@ -9,6 +9,7 @@ import ClockWork from "~components/Sections/experiences/ClockWork";
 import useImagePreloader from "~hooks/useImagePreloader";
 import Exbear from "~components/Sections/experiences/Exbear";
 import RisingDream from "~components/Sections/experiences/RisingDream";
+import BUCA from "~components/Sections/experiences/BUCA";
 
 function WorkExperienceSection() {
   useImagePreloader([backgroundSec1, headline]);
@@ -40,7 +41,7 @@ function WorkExperienceSection() {
 
         <RisingDream />
 
-        <div className="min-h-screen"></div>
+        <BUCA />
       </div>
     </section>
   );

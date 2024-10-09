@@ -36,17 +36,17 @@ function App() {
 
   return (
     <>
-      {/*<main*/}
-      {/*  ref={rootElRef}*/}
-      {/*  className="relative flex min-h-svh w-full flex-col justify-center overflow-hidden"*/}
-      {/*>*/}
-      {/*<HeroSection isPreloading={isPreloading} rootElm={rootElRef} />*/}
-      {/*<IntroduceSection />*/}
-      <ProfileSection />
-      <WorkExperienceSection />
+      <main
+        ref={rootElRef}
+        className="relative flex min-h-dvh w-full flex-col justify-center overflow-hidden"
+      >
+        <HeroSection isPreloading={isPreloading} rootElm={rootElRef} />
+        <IntroduceSection />
+        <ProfileSection />
+        <WorkExperienceSection />
 
-      <PreloaderCounter finishLoading={() => setIsPreloading(false)} />
-      {/*</main>*/}
+        <PreloaderCounter finishLoading={() => setIsPreloading(false)} />
+      </main>
     </>
   );
 }
