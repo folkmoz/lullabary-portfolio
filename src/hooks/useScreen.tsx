@@ -6,13 +6,25 @@ export function useScreen() {
     height: window.innerHeight,
   });
 
+  const [device, setDevice] = useState<"mobile" | "tablet" | "desktop">();
+
   useEffect(() => {
     const handleResize = () => {
       setScreen({
         width: window.innerWidth,
         height: window.innerHeight,
       });
+
+      if (window.innerWidth < 768) {
+        setDevice("mobile");
+      } else if (window.innerWidth < 1024) {
+        setDevice("tablet");
+      } else {
+        setDevice("desktop");
+      }
     };
+
+    handleResize();
 
     window.addEventListener("resize", handleResize);
 
@@ -21,5 +33,5 @@ export function useScreen() {
     };
   }, []);
 
-  return screen;
+  return { ...screen, device };
 }

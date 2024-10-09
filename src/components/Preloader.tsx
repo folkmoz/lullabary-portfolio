@@ -12,6 +12,7 @@ import image7 from "../assets/hero/image-hero-7.jpg";
 import image8 from "../assets/hero/image-hero-8.jpg";
 import image9 from "../assets/hero/image-hero-9.jpg";
 import image10 from "../assets/hero/image-hero-10.jpg";
+import { config } from "~/config";
 
 const heroImages = [
   image1,
@@ -58,6 +59,8 @@ function PreloaderCounter({ finishLoading }: { finishLoading: () => void }) {
   };
 
   useGSAP(() => {
+    if (config.isPreview) return;
+
     const images = imageWrapper.current!.querySelectorAll("img");
 
     gsap.fromTo(
@@ -100,12 +103,19 @@ function PreloaderCounter({ finishLoading }: { finishLoading: () => void }) {
     );
   }, []);
 
+  if (config.isPreview) {
+    return null;
+  }
+
   return (
     <div
       ref={contianer}
-      className="font-varent text-primary fixed inset-0 z-[9999] grid place-items-center text-[20vw]"
+      className="fixed inset-0 z-[9999] grid place-items-center font-varent text-[20vw] text-primary"
     >
-      <div ref={imageWrapper} className="relative size-[600px] overflow-hidden">
+      <div
+        ref={imageWrapper}
+        className="relative size-[300px] overflow-hidden md:size-[600px]"
+      >
         {heroImages.map((image, index) => (
           <img
             style={{ clipPath: "inset(0 0 0 0)", zIndex: 10 - index }}
@@ -118,7 +128,7 @@ function PreloaderCounter({ finishLoading }: { finishLoading: () => void }) {
       </div>
       <h1
         ref={counterRef}
-        className="font-wagon absolute bottom-0 right-0 flex h-[10vw] w-[10vw] items-center justify-center text-[10vw] italic leading-[10vw] lg:right-16"
+        className="absolute bottom-0 right-4 flex h-[10vw] w-[10vw] items-center justify-center font-wagon text-[10vw] italic leading-[10vw] md:right-10 lg:right-16"
       >
         0
       </h1>

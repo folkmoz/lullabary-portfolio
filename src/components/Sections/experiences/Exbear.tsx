@@ -1,0 +1,87 @@
+import backgroundSec3 from "~assets/experience/bg-blue.png";
+import HeadlineRow from "~components/Sections/experiences/components/HeadlineRow";
+
+import useImagePreloader from "~hooks/useImagePreloader";
+import Animation from "~components/AnimatedComponents/Animation";
+import VideoPlayer from "~components/Sections/experiences/components/Videoplayer";
+import clip from "~assets/experience/exbear/clip/clip.mp4";
+import FullLinkButton from "~components/Sections/experiences/components/FullLinkButton";
+
+import hFishTank from "~assets/experience/exbear/pics/h-fish-tank.png";
+import vFishTank from "~assets/experience/exbear/pics/v-fish-tank.png";
+import bh01 from "~assets/experience/exbear/pics/bh01.jpeg";
+import bh02 from "~assets/experience/exbear/pics/bh02.jpeg";
+import bh03 from "~assets/experience/exbear/pics/bh03.jpeg";
+import bh04 from "~assets/experience/exbear/pics/bh04.jpeg";
+import CustomSwiper from "~components/Sections/experiences/components/CustomSwiper";
+import { useScreen } from "~hooks/useScreen";
+import { Parallax } from "~components/AnimatedComponents/Parallax";
+import Bubble from "~components/Bubble";
+
+function Exbear() {
+  useImagePreloader([backgroundSec3, hFishTank, bh01, bh02, bh03, bh04]);
+
+  const { device } = useScreen();
+
+  return (
+    <div
+      style={{
+        backgroundImage: `url(${backgroundSec3})`,
+        zIndex: 0,
+      }}
+      className="shadow-custom-b relative min-h-dvh bg-cover bg-no-repeat pb-[50dvh] lg:pb-0"
+    >
+      <div className="relative mx-auto flex min-h-dvh w-full max-w-[1200px] flex-col p-4">
+        <HeadlineRow
+          starColor="pink"
+          title="Art Director"
+          subtitle="EXBEAR - แพรวพราว Feat. Thursdvy, Miiiii & NADIE (Official MV)"
+          description="I handled the art direction, managed the mood, tone, and costumes, and was responsible for editing the mv.
+I also drew and animated theanimations for the MV. I designed the music video tone using pink and purple
+tones to convey the charm of the girl we secretly admire but I didn’t want it to be overly sweet,so I Add green
+and blue to give it a cooler style."
+        />
+
+        <div className="relative flex min-h-dvh flex-col gap-4 lg:flex-row lg:gap-8">
+          <img
+            src={device === "desktop" ? hFishTank : vFishTank}
+            alt=""
+            className="absolute z-0 w-full lg:rotate-[-1deg] lg:scale-[1.05]"
+          />
+
+          <div className="h-full w-full lg:px-10 lg:pt-14 xl:pt-[4.6rem]">
+            <div className="flex flex-col gap-2 px-16 pt-36 lg:flex-row lg:px-0 lg:pt-4 xl:pt-0">
+              <div className="relative w-full lg:w-[55%]">
+                <Animation.ImageReveal end="top 80%">
+                  <VideoPlayer source={clip} />
+                </Animation.ImageReveal>
+              </div>
+
+              <div className="w-full items-center lg:flex lg:w-1/3">
+                <div className="absolute -bottom-20 left-0 right-0 flex scale-150 justify-center lg:relative lg:ml-24 lg:block lg:scale-100">
+                  <FullLinkButton
+                    href={"https://www.youtube.com/watch?v=AwM9Lxup52o"}
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="relative mt-2 w-full px-16 lg:w-[55%] lg:px-0">
+              <CustomSwiper
+                showLabel={false}
+                height="h-[180px] xl:h-[200px]"
+                images={[bh01, bh02, bh03, bh04]}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <Parallax className="absolute -bottom-24 left-0 z-[1] size-[300px]">
+        <Bubble type="red-bubble" drag={false} />
+      </Parallax>
+    </div>
+  );
+}
+
+export default Exbear;

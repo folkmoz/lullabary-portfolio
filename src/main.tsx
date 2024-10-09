@@ -1,15 +1,20 @@
 import { Fragment } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App.tsx";
+import App from "./App";
+
+import TailwindcssIndicator from "./components/TailwindcssIndicator";
+
 import "./index.css";
-import TailwindcssIndicator from "./components/TailwindcssIndicator.tsx";
-import ReactLenis from "@studio-freight/react-lenis";
+import "swiper/css";
+import Lenis from "~/Lenis";
 
 createRoot(document.getElementById("root")!).render(
   <Fragment>
-    <ReactLenis root>
-      <App />
-    </ReactLenis>
+    <Lenis>
+      <div className="smooth-scroll">
+        <App />
+      </div>
+    </Lenis>
     <TailwindcssIndicator />
   </Fragment>,
 );

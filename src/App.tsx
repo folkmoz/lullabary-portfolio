@@ -1,14 +1,20 @@
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import { CustomEase } from "gsap/CustomEase";
 import { useGSAP } from "@gsap/react";
 import HeroSection from "~components/Sections/HeroSection";
-// import PreloaderCounter from "./components/Preloader.tsx";
+import PreloaderCounter from "~components/Preloader";
+import IntroduceSection from "~components/Sections/IntroduceSection";
+import ProfileSection from "~components/Sections/ProfileSection";
+import WorkExperienceSection from "~components/Sections/WorkExperienceSection";
+import { config } from "~/config";
 
 gsap.registerPlugin(CustomEase);
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(MotionPathPlugin);
 
 function App() {
   const [isPreloading, setIsPreloading] = useState(true);
@@ -23,20 +29,25 @@ function App() {
   );
 
   useEffect(() => {
+    if (config.isPreview) return;
+
     ScrollTrigger.clearScrollMemory("manual");
   }, []);
 
   return (
-    <main
-      ref={rootElRef}
-      className="relative flex min-h-svh w-full flex-col justify-center overflow-hidden"
-    >
-      <HeroSection isPreloading={isPreloading} rootElm={rootElRef} />
-      <section className="relative flex min-h-svh w-full justify-center gap-4 lg:pt-40 xl:pt-52"></section>
-      <section className="relative flex min-h-svh w-full justify-center gap-4 lg:pt-40 xl:pt-52"></section>
+    <>
+      {/*<main*/}
+      {/*  ref={rootElRef}*/}
+      {/*  className="relative flex min-h-svh w-full flex-col justify-center overflow-hidden"*/}
+      {/*>*/}
+      {/*<HeroSection isPreloading={isPreloading} rootElm={rootElRef} />*/}
+      {/*<IntroduceSection />*/}
+      <ProfileSection />
+      <WorkExperienceSection />
 
-      {/*<PreloaderCounter finishLoading={() => setIsPreloading(false)} />*/}
-    </main>
+      <PreloaderCounter finishLoading={() => setIsPreloading(false)} />
+      {/*</main>*/}
+    </>
   );
 }
 
