@@ -57,6 +57,8 @@
         font-display: swap;
         src: url('./assets/fonts/Wagon-Bold.otf') format('opentype');
     }
+
+
 }
 
 @layer utilities {

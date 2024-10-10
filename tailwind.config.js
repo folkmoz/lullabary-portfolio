@@ -13,6 +13,7 @@ export default {
         varent: ["VarentGrotesk", "sans-serif"],
         "le-murmure": ["Le Murmure", "sans-serif"],
         andalos: ["Andalos", "sans-serif"],
+        thai: ["IBM Plex Sans Thai", "sans-serif"],
       },
 
       keyframes: {

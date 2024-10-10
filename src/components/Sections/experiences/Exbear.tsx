@@ -40,7 +40,7 @@ function Exbear() {
         backgroundImage: `url(${backgroundSec3})`,
         zIndex: 2,
       }}
-      className="shadow-custom-b relative min-h-dvh bg-cover bg-no-repeat pb-[50dvh] lg:pb-0"
+      className="shadow-custom-b relative min-h-dvh bg-cover bg-no-repeat pb-[0dvh] lg:pb-0"
     >
       <div className="relative mx-auto flex min-h-dvh w-full max-w-[1200px] flex-col p-4">
         <HeadlineRow
@@ -58,7 +58,7 @@ function Exbear() {
           />
 
           <div className="h-full w-full lg:px-10 lg:pt-14 xl:pt-[4.6rem]">
-            <div className="flex flex-col gap-2 px-16 pt-36 lg:flex-row lg:px-0 lg:pt-4 xl:pt-0">
+            <div className="flex flex-col gap-2 px-8 pt-16 md:px-16 md:pt-36 lg:flex-row lg:px-0 lg:pt-4 xl:pt-0">
               <div className="relative w-full lg:w-[55%]">
                 <Animation.ImageReveal end="top 80%">
                   <VideoPlayer source={clip} />
@@ -66,7 +66,7 @@ function Exbear() {
               </div>
 
               <div className="w-full items-center lg:flex lg:w-1/3">
-                <div className="absolute -bottom-20 left-0 right-0 flex scale-150 justify-center lg:relative lg:ml-24 lg:block lg:scale-100">
+                <div className="absolute bottom-32 left-0 right-0 flex scale-[2] justify-center lg:relative lg:bottom-0 lg:ml-24 lg:block lg:scale-100">
                   <FullLinkButton
                     href={"https://www.youtube.com/watch?v=S5QYZaLa1lQ"}
                   />
@@ -74,7 +74,7 @@ function Exbear() {
               </div>
             </div>
 
-            <div className="relative mt-2 w-full px-16 lg:w-[55%] lg:px-0">
+            <div className="relative mt-2 w-full px-8 md:px-16 lg:w-[55%] lg:px-0">
               <CustomSwiper
                 showLabel={false}
                 height="h-[180px] xl:h-[200px]"
@@ -89,7 +89,7 @@ function Exbear() {
         speed={1.2}
         start="top bottom"
         end="bottom top"
-        className="absolute left-10 top-[30%] z-[2] size-20"
+        className="absolute left-10 top-[30%] z-[2] hidden size-20 md:block"
       >
         <Bubble type="bubble-fill" drag={false} />
       </Parallax>
@@ -97,26 +97,26 @@ function Exbear() {
       <Parallax
         speed={2}
         start="top bottom"
-        className="absolute bottom-1/2 left-20 z-[2] size-20 md:bottom-[30%] md:size-40"
+        className="absolute bottom-1/2 left-20 z-[2] hidden size-20 md:bottom-[30%] md:block md:size-40"
       >
         <Bubble type="bubble-fill" drag={false} />
       </Parallax>
 
-      <Parallax className="absolute bottom-10 left-0 z-[1] size-[300px]">
+      <Parallax className="absolute -left-24 bottom-32 z-[1] size-[200px] md:bottom-10 md:left-0 lg:size-[300px]">
         <Bubble type="red-bubble" drag={false} />
       </Parallax>
 
       <Parallax
         speed={2.3}
         start="top bottom"
-        className="absolute bottom-1/2 right-20 z-[2] size-20 md:bottom-[30%] lg:right-[30%]"
+        className="absolute bottom-1/2 right-20 z-[2] hidden size-20 md:bottom-[30%] md:block lg:right-[30%]"
       >
         <Bubble type="bubble-fill" drag={false} />
       </Parallax>
 
       <Parallax
         speed={1.3}
-        className="absolute -bottom-48 right-0 z-[1] size-[300px] lg:-right-64 lg:size-[600px] lg:scale-110"
+        className="absolute -bottom-20 -right-16 z-[1] size-[200px] md:-bottom-48 md:right-0 md:size-[300px] lg:-right-64 lg:size-[600px] lg:scale-110"
       >
         <img src={starCoral} alt="pink star coral" />
       </Parallax>

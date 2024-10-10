@@ -16,7 +16,7 @@ function Buca() {
   useImagePreloader([bh01, bh02, bh03]);
 
   return (
-    <div className="relative z-[1] mt-14 w-full bg-secondary py-10">
+    <div className="relative z-[1] w-full bg-secondary py-4 md:mt-14 md:py-10">
       <div className="h relative mx-auto flex w-full max-w-[1200px] flex-col p-4">
         <HeadlineRow
           title="Art Director"

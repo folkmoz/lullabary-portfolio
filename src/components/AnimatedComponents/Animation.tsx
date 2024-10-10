@@ -117,10 +117,16 @@ Animation.TextReveal = function Animation({
 };
 Animation.ImageReveal = function Animation({
   children,
+  once = false,
+  withScale = false,
+  className = "",
   start = "top bottom",
   end = "bottom top",
 }: {
   children: React.ReactNode;
+  once?: boolean;
+  withScale?: boolean;
+  className?: string;
   start?: string;
   end?: string;
 }) {
@@ -128,27 +134,58 @@ Animation.ImageReveal = function Animation({
   const { device } = useScreen();
 
   useGSAP(() => {
-    if (config.isPreview) return;
+    // if (config.isPreview) return;
 
     if (!device || device === "mobile") {
       return;
     }
-    gsap.from(ref.current, {
+
+    const tl = gsap.timeline();
+
+    tl.from(ref.current, {
       clipPath: "inset(100% 0 0 0)",
       scrollTrigger: {
         trigger: ref.current,
         start: start,
         end: end,
         scrub: 1,
+        once: once,
+        toggleActions: once ? "play none none none" : "play none none none",
       },
     });
+
+    if (withScale) {
+      const img = ref.current!.firstChild as HTMLImageElement;
+
+      img.style.transformOrigin = "center";
+      img.style.willChange = "transform";
+
+      tl.from(
+        img,
+        {
+          ease: "none",
+          scale: 1.5,
+          scrollTrigger: {
+            trigger: ref.current,
+            start: "top bottom",
+            end: "bottom bottom",
+            once: true,
+            toggleActions: "play none none none",
+            scrub: 1,
+          },
+        },
+        0,
+      );
+    }
   }, [device]);
 
   return React.createElement(
     "div",
     {
       ref,
+      className,
       style: {
+        overflow: withScale ? "hidden" : "visible",
         clipPath: "inset(0% 0% 0% 0%)",
       },
     },

@@ -4,9 +4,11 @@ import { ReactLenis } from "@studio-freight/react-lenis";
 function Lenis({ children }: PropsWithChildren) {
   return (
     <ReactLenis
-      options={{
-        duration: 2,
-      }}
+      options={
+        {
+          // duration: 2,
+        }
+      }
       root
     >
       {children}

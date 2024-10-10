@@ -11,6 +11,7 @@ import IntroduceSection from "~components/Sections/IntroduceSection";
 import ProfileSection from "~components/Sections/ProfileSection";
 import WorkExperienceSection from "~components/Sections/WorkExperienceSection";
 import { config } from "~/config";
+import IllustrationSection from "~components/Sections/IllustrationSection";
 
 gsap.registerPlugin(CustomEase);
 gsap.registerPlugin(ScrollTrigger);
@@ -36,17 +37,25 @@ function App() {
 
   return (
     <>
-      <main
-        ref={rootElRef}
-        className="relative flex min-h-dvh w-full flex-col justify-center overflow-hidden"
-      >
-        <HeroSection isPreloading={isPreloading} rootElm={rootElRef} />
-        <IntroduceSection />
-        <ProfileSection />
-        <WorkExperienceSection />
+      {config.isPreview ? (
+        <>
+          {/*<WorkExperienceSection />*/}
 
-        <PreloaderCounter finishLoading={() => setIsPreloading(false)} />
-      </main>
+          <IllustrationSection />
+        </>
+      ) : (
+        <main
+          ref={rootElRef}
+          className="relative flex min-h-dvh w-full flex-col justify-center overflow-hidden"
+        >
+          <HeroSection isPreloading={isPreloading} rootElm={rootElRef} />
+          <IntroduceSection />
+          <ProfileSection />
+          <WorkExperienceSection />
+
+          <PreloaderCounter finishLoading={() => setIsPreloading(false)} />
+        </main>
+      )}
     </>
   );
 }
