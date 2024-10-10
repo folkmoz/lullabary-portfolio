@@ -4,10 +4,12 @@ import { cn } from "~/lib/utils/tailwindcss";
 
 function CustomSwiper({
   height = "h-[200px] md:h-[250px]",
+  width = "max-w-[300px] md:max-w-[350px]",
   showLabel = true,
   images,
 }: {
   height?: string;
+  width?: string;
   showLabel?: boolean;
   images: string[];
 }) {
@@ -23,10 +25,7 @@ function CustomSwiper({
         className={cn("flex w-max gap-2", height)}
       >
         {images.map((image, index) => (
-          <div
-            key={index}
-            className="h-full w-auto max-w-[300px] md:max-w-[350px]"
-          >
+          <div key={index} className={cn("h-full w-auto", width)}>
             <img
               draggable={false}
               src={image}

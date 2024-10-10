@@ -13,6 +13,7 @@ import image8 from "../assets/hero/image-hero-8.jpg";
 import image9 from "../assets/hero/image-hero-9.jpg";
 import image10 from "../assets/hero/image-hero-10.jpg";
 import { config } from "~/config";
+import useImagePreloader from "~hooks/useImagePreloader";
 
 const heroImages = [
   image1,
@@ -28,6 +29,8 @@ const heroImages = [
 ];
 
 function PreloaderCounter({ finishLoading }: { finishLoading: () => void }) {
+  useImagePreloader(heroImages);
+
   const contianer = useRef<HTMLDivElement>(null);
   const imageWrapper = useRef<HTMLDivElement>(null);
   const counterRef = useRef<HTMLHeadingElement>(null);
