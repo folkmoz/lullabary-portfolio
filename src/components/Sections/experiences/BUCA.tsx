@@ -21,8 +21,7 @@ function Buca() {
         <HeadlineRow
           title="Art Director"
           subtitle="Ads opening BUCA Talent 11"
-          description="Promotional advertisement for BUCA Talent 11 scholarships at Bangkok University, aiming to inspire students interested in pursuing
-higher education to audition."
+          description="Promotional advertisement for BUCA Talent 11 scholarships at Bangkok University, aiming to inspire students interested in pursuing higher education to audition."
         />
 
         <div className="w-full">

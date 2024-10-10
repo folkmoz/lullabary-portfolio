@@ -22,11 +22,7 @@ function NotFriends() {
         starColor="pink"
         title="Art Director"
         subtitle="NOT FRIENDS MUSIC VIDEO CONTEST by GDH"
-        description="As the art director for this MV, I aimed to create an art direction
-            that feels warm and nostalgic, but at the same time, a bit somber
-            too.so I used warm, dreamy tones to create a soft hazy look,
-            separating the happy past from the present. Red was used as a symbol
-            for the friend who passed away."
+        description="As the art director for this MV, I aimed to create an art direction that feels warm and nostalgic, but at the same time, a bit somber too.so I used warm, dreamy tones to create a soft hazy look, separating the happy past from the present. Red was used as a symbol for the friend who passed away."
       />
 
       <div className="w-full">

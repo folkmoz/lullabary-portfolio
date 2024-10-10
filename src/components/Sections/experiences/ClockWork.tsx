@@ -44,10 +44,7 @@ function ClockWork() {
           starColor="pink"
           title="Art Director"
           subtitle=""
-          description="I want to convey the story of a woman suffering from the loss of her lover.
-        This song will use colors as symbols for different times. The moments spent with her lover will be
-        warm tones. While the times she's alone will be blue. There will also be motifs like white roses,
-        blue roses, and a stopped clock"
+          description="I want to convey the story of a woman suffering from the loss of her lover. This song will use colors as symbols for different times. The moments spent with her lover will be warm tones. While the times she's alone will be blue. There will also be motifs like white roses, blue roses, and a stopped clock"
         />
 
         <div className="relative z-[1] w-full">

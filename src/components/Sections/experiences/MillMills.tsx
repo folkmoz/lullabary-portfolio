@@ -24,12 +24,7 @@ function MillMills() {
         <HeadlineRow
           title="Art Director"
           subtitle="MillMills — คนเคยรักกัน (Official Music Video)"
-          description="This project was fun to work on in terms of mood and tone because I
-            chose to use blue and red to represent the relationship between the
-            lovers. It was challenging because the art team had to transform the
-            football field into a red carpet event. This required heavy
-            planning, creating large props ourselves, all within a tight
-            timeline, making it incredibly tough but exciting."
+          description="This project was fun to work on in terms of mood and tone because I chose to use blue and red to represent the relationship between the lovers. It was challenging because the art team had to transform the football field into a red carpet event. This required heavy planning, creating large props ourselves, all within a tight timeline, making it incredibly tough but exciting."
         />
 
         <div className="w-full">
