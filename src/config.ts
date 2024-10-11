@@ -1,3 +1,3 @@
 export const config = {
-  isPreview: true,
+  isPreview: import.meta.env.MODE === "development",
 };
