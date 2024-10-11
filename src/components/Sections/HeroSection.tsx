@@ -1,5 +1,5 @@
-import fish2 from "../../assets/fish2.png";
-import fish1 from "../../assets/fish1.png";
+import fish2 from "~assets/fish2.png";
+import fish1 from "~assets/fish1.png";
 import primaryBg from "~assets/bg/bg-primary.webp";
 
 import { useGSAP } from "@gsap/react";
