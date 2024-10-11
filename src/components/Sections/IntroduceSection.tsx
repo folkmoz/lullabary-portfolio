@@ -81,7 +81,7 @@ function IntroduceSection() {
   return (
     <section
       ref={containerRef}
-      className="relative flex min-h-svh w-full flex-col justify-start gap-4 pt-20 lg:pb-[40vh] xl:pt-60"
+      className="relative flex min-h-lvh w-full flex-col justify-start gap-4 pt-20 lg:pb-[40vh] xl:pt-60"
     >
       <div className="relative mx-auto flex min-h-svh w-full max-w-screen-lg flex-col items-start gap-4 px-4 md:px-16 lg:px-4">
         <div className="text-md w-full md:text-xl xl:text-3xl">

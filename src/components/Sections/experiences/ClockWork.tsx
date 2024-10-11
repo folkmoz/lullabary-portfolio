@@ -37,7 +37,7 @@ function ClockWork() {
         backgroundImage: `url(${backgroundSec3})`,
         zIndex: 0,
       }}
-      className="relative -mb-1 -mt-24 min-h-[120dvh] overflow-hidden bg-cover bg-no-repeat pb-[30dvh] pt-40 lg:pb-20"
+      className="relative -mb-1 -mt-24 overflow-hidden bg-cover bg-no-repeat pb-[30lvh] pt-40 lg:pb-20"
     >
       <div className="relative mx-auto flex min-h-dvh w-full max-w-[1200px] flex-col p-4">
         <HeadlineRow

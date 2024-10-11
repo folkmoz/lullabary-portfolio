@@ -85,7 +85,7 @@ export default function Bubble({
         ref={ref}
         src={src()}
         alt="bubble"
-        className="absolute left-0 top-0 size-fit"
+        className="absolute left-0 top-0 w-full"
       />
     </>
   );

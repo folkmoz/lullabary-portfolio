@@ -56,7 +56,7 @@ function HeroSection({
       mobile: {
         rotate: -30,
         x: 0,
-        y: 300,
+        y: 250,
       },
 
       tablet: {
@@ -179,7 +179,7 @@ function HeroSection({
       style={{
         clipPath: config.isPreview ? "unset" : "inset(0px 0px 0px)",
       }}
-      className="pointer-events-none relative flex min-h-svh w-full flex-col justify-center lg:min-h-[150svh]"
+      className="pointer-events-none relative flex min-h-lvh w-full flex-col justify-center lg:min-h-[150svh]"
     >
       <div className="mx-auto max-w-screen-md space-y-4 lg:-mt-[50vh] lg:space-y-0">
         <div>

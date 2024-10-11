@@ -29,7 +29,7 @@ const clips = [
 
 function MVs() {
   return (
-    <div className="mt-10 flex min-h-dvh w-full flex-col">
+    <div className="mt-10 flex w-full flex-col">
       <div className="mb-4 space-y-1">
         <h2 className="font-bold">
           <span className="font-thai md:text-3xl">

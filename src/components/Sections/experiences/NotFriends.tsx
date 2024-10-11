@@ -17,7 +17,7 @@ import CustomSwiper from "~components/Sections/experiences/components/CustomSwip
 
 function NotFriends() {
   return (
-    <div className="relative mx-auto mt-20 flex min-h-dvh w-full max-w-[1200px] flex-col p-4">
+    <div className="relative mx-auto mt-20 flex w-full max-w-[1200px] flex-col p-4">
       <HeadlineRow
         starColor="pink"
         title="Art Director"

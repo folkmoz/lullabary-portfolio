@@ -22,7 +22,7 @@ function RisingDream() {
 
   return (
     <div className="relative z-[1] mt-14 w-full bg-secondary py-10">
-      <div className="h relative mx-auto flex w-full max-w-[1200px] flex-col p-4">
+      <div className="relative mx-auto flex w-full max-w-[1200px] flex-col p-4">
         <HeadlineRow
           title="Art Director"
           subtitle="Rising to your dream [Official MV]"

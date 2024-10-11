@@ -47,7 +47,7 @@ function App() {
 
   return (
     <>
-      {config.isPreview ? (
+      {!config.isPreview ? (
         <>
           {/*<WorkExperienceSection />*/}
 
@@ -56,7 +56,7 @@ function App() {
       ) : (
         <main
           ref={rootElRef}
-          className="relative flex min-h-dvh w-full flex-col justify-center overflow-hidden"
+          className="relative flex min-h-lvh w-full flex-col justify-center overflow-hidden"
         >
           <HeroSection isPreloading={isPreloading} rootElm={rootElRef} />
 

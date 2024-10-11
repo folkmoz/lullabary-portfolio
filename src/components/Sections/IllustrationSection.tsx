@@ -12,7 +12,7 @@ function IllustrationSection() {
   return (
     <section
       id="illustration"
-      className="relative flex min-h-svh w-full flex-col overflow-hidden bg-gradient-to-b from-[#51a1b7] to-[#f0f4c8]"
+      className="relative flex w-full flex-col overflow-hidden bg-gradient-to-b from-[#51a1b7] to-[#f0f4c8]"
     >
       <div className="relative mx-auto flex w-full max-w-[1200px] flex-col gap-4 p-4">
         <div className="md:-mb-28 lg:-mx-8">

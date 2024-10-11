@@ -131,7 +131,7 @@ function ProfileSection() {
   return (
     <section
       id="profile"
-      className="relative -mb-1 flex min-h-svh w-full flex-col justify-center gap-4 overflow-hidden bg-secondary pt-40 xl:pt-52"
+      className="relative -mb-1 flex w-full flex-col justify-center gap-4 overflow-hidden bg-secondary pt-40 xl:pt-52"
     >
       <div
         id="profile-pinned"

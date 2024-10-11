@@ -40,9 +40,9 @@ function Exbear() {
         backgroundImage: `url(${backgroundSec3})`,
         zIndex: 2,
       }}
-      className="shadow-custom-b relative min-h-dvh bg-cover bg-no-repeat md:pb-[20dvh] lg:pb-0"
+      className="shadow-custom-b relative bg-cover bg-no-repeat md:pb-[20lvh] lg:pb-0"
     >
-      <div className="relative mx-auto flex min-h-dvh w-full max-w-[1200px] flex-col p-4">
+      <div className="relative mx-auto flex w-full max-w-[1200px] flex-col p-4">
         <HeadlineRow
           starColor="pink"
           title="Art Director"
