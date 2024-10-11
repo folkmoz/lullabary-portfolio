@@ -1,0 +1,19 @@
+
+{
+  "redirects": [
+    {
+      "source": "/assets/(.*)",
+      "destination": "/assets/$1"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/assets/(.*)",
+      "destination": "/assets/$1"
+    }
+  ]
+}

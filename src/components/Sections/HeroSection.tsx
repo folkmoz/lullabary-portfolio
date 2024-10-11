@@ -11,6 +11,7 @@ import { Parallax } from "~components/AnimatedComponents/Parallax";
 import Bubble from "~components/Bubble";
 import { cn } from "~/lib/utils/tailwindcss";
 import { config } from "~/config";
+import useImagePreloader from "~hooks/useImagePreloader";
 function HeroSection({
   isPreloading,
   rootElm,
@@ -18,6 +19,7 @@ function HeroSection({
   isPreloading: boolean;
   rootElm: React.RefObject<HTMLDivElement>;
 }) {
+  useImagePreloader([fish1, fish2, primaryBg]);
   const textHeadingRef = useRef<HTMLHeadingElement>(null);
   const textSubHeadingRef = useRef<HTMLDivElement>(null);
   const fish1Ref = useRef<HTMLDivElement>(null);
@@ -244,7 +246,7 @@ function HeroSection({
       <div
         style={{
           zIndex: -1,
-          background: `url('/images/bg/bg-primary.webp') no-repeat center bottom/cover`,
+          background: `url(${primaryBg}) no-repeat center bottom/cover`,
         }}
         className="fixed inset-0 bg-white"
       ></div>
