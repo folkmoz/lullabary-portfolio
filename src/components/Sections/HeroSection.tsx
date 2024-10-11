@@ -1,7 +1,3 @@
-import fish2 from "~assets/fish2.png";
-import fish1 from "~assets/fish1.png";
-import primaryBg from "~assets/bg/bg-primary.webp";
-
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
@@ -12,6 +8,12 @@ import Bubble from "~components/Bubble";
 import { cn } from "~/lib/utils/tailwindcss";
 import { config } from "~/config";
 import useImagePreloader from "~hooks/useImagePreloader";
+import { getCloudinaryImage } from "~/lib/Cloudinary";
+
+const primaryBg = getCloudinaryImage("bg/bg-primary");
+const fish2 = getCloudinaryImage("fish02");
+const fish1 = getCloudinaryImage("fish01");
+
 function HeroSection({
   isPreloading,
   rootElm,

@@ -1,19 +1,18 @@
 import Animation from "~components/AnimatedComponents/Animation";
 import VideoPlayer from "~components/Sections/experiences/components/Videoplayer";
-
-import clip from "~assets/experience/not-friend/clip/prod-clip.mp4";
-
-import bh01 from "~assets/experience/not-friend/pics/bh01.jpeg";
-import bh02 from "~assets/experience/not-friend/pics/bh02.jpeg";
-import bh03 from "~assets/experience/not-friend/pics/bh03.jpeg";
-import bh04 from "~assets/experience/not-friend/pics/bh04.jpeg";
-import bh05 from "~assets/experience/not-friend/pics/bh05.jpeg";
-
 import FullLinkButton from "~components/Sections/experiences/components/FullLinkButton";
 import HeadlineRow from "~components/Sections/experiences/components/HeadlineRow";
 import { Parallax } from "~components/AnimatedComponents/Parallax";
 import Bubble from "~components/Bubble";
 import CustomSwiper from "~components/Sections/experiences/components/CustomSwiper";
+import { getCloudinaryImage, getCloudinaryVideo } from "~/lib/Cloudinary";
+
+const clip = getCloudinaryVideo("experience/not-friend/clip/clip");
+const bh01 = getCloudinaryImage("experience/not-friend/pics/01");
+const bh02 = getCloudinaryImage("experience/not-friend/pics/02");
+const bh03 = getCloudinaryImage("experience/not-friend/pics/03");
+const bh04 = getCloudinaryImage("experience/not-friend/pics/04");
+const showcase = getCloudinaryImage("experience/not-friend/pics/showcase");
 
 function NotFriends() {
   return (
@@ -36,7 +35,7 @@ function NotFriends() {
           <div className="flex w-full lg:w-1/2">
             <div className="hidden lg:block">
               <Animation.ImageReveal end="top 70%">
-                <img src={bh03} alt="bh01" className="h-[300px]" />
+                <img src={showcase} alt="bh01" className="h-[300px]" />
               </Animation.ImageReveal>
             </div>
             <div className="lg:ml-24">
@@ -47,7 +46,7 @@ function NotFriends() {
           </div>
         </div>
         <div className="mt-2">
-          <CustomSwiper images={[bh01, bh02, bh04, bh05]} />
+          <CustomSwiper images={[bh01, bh02, bh03, bh04]} />
         </div>
       </div>
 

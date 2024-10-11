@@ -1,19 +1,20 @@
 import React from "react";
 import Animation from "~components/AnimatedComponents/Animation";
 import VideoPlayer from "~components/Sections/experiences/components/Videoplayer";
-import clip from "~assets/experience/millmills/clip/millmills-clip.mp4";
-import bh01 from "~assets/experience/millmills/pics/bh01.jpeg";
-import bh02 from "~assets/experience/millmills/pics/bh02.jpeg";
-import bh03 from "~assets/experience/millmills/pics/bh03.jpeg";
-import bh04 from "~assets/experience/millmills/pics/bh04.jpeg";
-import bh05 from "~assets/experience/millmills/pics/bh05.jpeg";
-import bh06 from "~assets/experience/millmills/pics/bh06.jpeg";
 import FullLinkButton from "~components/Sections/experiences/components/FullLinkButton";
 import HeadlineRow from "~components/Sections/experiences/components/HeadlineRow";
 import CustomSwiper from "~components/Sections/experiences/components/CustomSwiper";
-
-import fish01 from "~assets/fish1.png";
 import useImagePreloader from "~hooks/useImagePreloader";
+import { getCloudinaryImage, getCloudinaryVideo } from "~/lib/Cloudinary";
+
+const clip = getCloudinaryVideo("experience/millmills/clip/clip");
+const bh01 = getCloudinaryImage("experience/millmills/pics/01");
+const bh02 = getCloudinaryImage("experience/millmills/pics/02");
+const bh03 = getCloudinaryImage("experience/millmills/pics/03");
+const bh04 = getCloudinaryImage("experience/millmills/pics/04");
+const bh05 = getCloudinaryImage("experience/millmills/pics/05");
+const bh06 = getCloudinaryImage("experience/millmills/pics/06");
+const fish01 = getCloudinaryImage("fish01");
 
 function MillMills() {
   useImagePreloader([bh01, bh02, bh03, bh04, bh05, bh06, fish01]);

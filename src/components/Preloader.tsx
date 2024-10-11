@@ -1,19 +1,20 @@
 import { useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-
-import image1 from "../assets/hero/image-hero-1.jpg";
-import image2 from "../assets/hero/image-hero-2.jpg";
-import image3 from "../assets/hero/image-hero-3.jpg";
-import image4 from "../assets/hero/image-hero-4.jpg";
-import image5 from "../assets/hero/image-hero-5.jpg";
-import image6 from "../assets/hero/image-hero-6.jpg";
-import image7 from "../assets/hero/image-hero-7.jpg";
-import image8 from "../assets/hero/image-hero-8.jpg";
-import image9 from "../assets/hero/image-hero-9.jpg";
-import image10 from "../assets/hero/image-hero-10.jpg";
 import { config } from "~/config";
 import useImagePreloader from "~hooks/useImagePreloader";
+import { getCloudinaryImage } from "~/lib/Cloudinary";
+
+const image1 = getCloudinaryImage("hero/01");
+const image2 = getCloudinaryImage("hero/02");
+const image3 = getCloudinaryImage("hero/03");
+const image4 = getCloudinaryImage("hero/04");
+const image5 = getCloudinaryImage("hero/05");
+const image6 = getCloudinaryImage("hero/06");
+const image7 = getCloudinaryImage("hero/07");
+const image8 = getCloudinaryImage("hero/08");
+const image9 = getCloudinaryImage("hero/09");
+const image10 = getCloudinaryImage("hero/10");
 
 const heroImages = [
   image1,

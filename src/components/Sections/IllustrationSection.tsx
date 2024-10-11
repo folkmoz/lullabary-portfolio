@@ -1,10 +1,11 @@
 import React from "react";
-
-import headline from "~/assets/illustration/headline.png";
+import { getCloudinaryImage } from "~/lib/Cloudinary";
 import useImagePreloader from "~hooks/useImagePreloader";
 import MelodyOfFolk from "~components/Sections/illustration/MelodyOfFolk";
 import Pepsi from "~components/Sections/illustration/Pepsi";
 import MVs from "~components/Sections/illustration/MVs";
+
+const headline = getCloudinaryImage("illustration/headline");
 
 function IllustrationSection() {
   useImagePreloader([headline]);

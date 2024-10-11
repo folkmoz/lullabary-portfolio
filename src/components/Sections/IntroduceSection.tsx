@@ -1,21 +1,20 @@
 import React, { useEffect, useRef } from "react";
 import ColTextReveal from "~components/ColTextReveal";
-
-import fish1 from "~assets/fish1.png";
-import blueStar from "~assets/blueStar.png";
-
-import profileBadge from "~assets/status/profile.png";
-import creativeBadge from "~assets/status/creative.png";
-import illustrationBadge from "~assets/status/illust.png";
-import graphicBadge from "~assets/status/graphic.png";
-import productionDesignBadge from "~assets/status/production-design.png";
-
 import { gsap } from "gsap";
-import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+// import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import { Parallax } from "~components/AnimatedComponents/Parallax";
 import Bubble from "~components/Bubble";
 import { useGSAP } from "@gsap/react";
 import { useLenis } from "@studio-freight/react-lenis";
+import { getCloudinaryImage } from "~/lib/Cloudinary";
+
+const fish1 = getCloudinaryImage("fish01");
+const blueStar = getCloudinaryImage("blueStar");
+const profileBadge = getCloudinaryImage("status/profile");
+const creativeBadge = getCloudinaryImage("status/creative");
+const illustrationBadge = getCloudinaryImage("status/illust");
+const graphicBadge = getCloudinaryImage("status/graphic");
+const productionDesignBadge = getCloudinaryImage("status/production-design");
 
 const badgeList = [
   { src: profileBadge, alt: "profile icon", target: "#profile-pinned" },

@@ -3,21 +3,20 @@ import Animation from "~components/AnimatedComponents/Animation";
 import VideoPlayer from "~components/Sections/experiences/components/Videoplayer";
 import FullLinkButton from "~components/Sections/experiences/components/FullLinkButton";
 import CustomSwiper from "~components/Sections/experiences/components/CustomSwiper";
-
-import backgroundSec3 from "~assets/experience/bg-blue.png";
-import clip from "~assets/experience/clockwork/clip/clip.mp4";
-
-import bh01 from "~assets/experience/clockwork/pics/bh01.jpeg";
-import bh02 from "~assets/experience/clockwork/pics/bh02.jpeg";
-import bh03 from "~assets/experience/clockwork/pics/bh03.jpeg";
-import bh04 from "~assets/experience/clockwork/pics/bh04.jpeg";
-import coral1 from "~assets/experience/clockwork/coral1.png";
-import coral2 from "~assets/experience/clockwork/coral2.png";
-
-import showcase from "~assets/experience/clockwork/pics/showcase.jpeg";
 import useImagePreloader from "~hooks/useImagePreloader";
 import { Parallax } from "~components/AnimatedComponents/Parallax";
 import Bubble from "~components/Bubble";
+import { getCloudinaryImage, getCloudinaryVideo } from "~/lib/Cloudinary";
+
+const clip = getCloudinaryVideo("experience/clockwork/clip/clip");
+const backgroundSec3 = getCloudinaryImage("experience/bg-blue");
+const bh01 = getCloudinaryImage("experience/clockwork/pics/01");
+const bh02 = getCloudinaryImage("experience/clockwork/pics/02");
+const bh03 = getCloudinaryImage("experience/clockwork/pics/03");
+const bh04 = getCloudinaryImage("experience/clockwork/pics/04");
+const coral1 = getCloudinaryImage("experience/clockwork/coral-01");
+const coral2 = getCloudinaryImage("experience/clockwork/coral-02");
+const showcase = getCloudinaryImage("experience/clockwork/pics/showcase");
 
 function ClockWork() {
   useImagePreloader([

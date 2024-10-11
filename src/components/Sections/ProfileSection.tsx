@@ -4,15 +4,22 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Parallax } from "~components/AnimatedComponents/Parallax";
 import Bubble, { BubbleType } from "~components/Bubble";
+import Animation from "~components/AnimatedComponents/Animation";
 import { useScreen } from "~hooks/useScreen";
 import { cn } from "~/lib/utils/tailwindcss";
+import { getCloudinaryImage } from "~/lib/Cloudinary";
 
-import profileImage from "~assets/profile/profile.png";
-import sponge01 from "~assets/profile/sponge01.png";
-import sponge02 from "~assets/profile/sponge02.png";
-import smallFish01 from "~assets/profile/smallFish01.png";
-import smallFish02 from "~assets/profile/smallFish02.png";
-import Animation from "~components/AnimatedComponents/Animation";
+// import profileImage from "~assets/profile/profile.png";
+// import sponge01 from "~assets/profile/sponge01.png";
+// import sponge02 from "~assets/profile/sponge02.png";
+// import smallFish01 from "~assets/profile/smallFish01.png";
+// import smallFish02 from "~assets/profile/smallFish02.png";
+
+const profileImage = getCloudinaryImage("profile/profile");
+const sponge01 = getCloudinaryImage("profile/sponge-01");
+const sponge02 = getCloudinaryImage("profile/sponge-02");
+const smallFish01 = getCloudinaryImage("profile/small-fish-01");
+const smallFish02 = getCloudinaryImage("profile/small-fish-02");
 
 function ProfileSection() {
   const profileContainer = useRef<HTMLDivElement>(null);
@@ -45,7 +52,7 @@ function ProfileSection() {
   }, []);
 
   useGSAP(() => {
-    if (device === "desktop") {
+    if (width >= 768) {
       ScrollTrigger.create({
         id: "profile-pinned",
         trigger: profileContainer.current!,

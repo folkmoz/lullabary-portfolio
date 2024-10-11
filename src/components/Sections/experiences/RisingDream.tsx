@@ -1,21 +1,20 @@
 import React from "react";
 import HeadlineRow from "~components/Sections/experiences/components/HeadlineRow";
-
-import bgBlue from "~assets/experience/bg-blue.png";
 import Animation from "~components/AnimatedComponents/Animation";
 import VideoPlayer from "~components/Sections/experiences/components/Videoplayer";
 import FullLinkButton from "~components/Sections/experiences/components/FullLinkButton";
 import CustomSwiper from "~components/Sections/experiences/components/CustomSwiper";
-
-import clip from "~assets/experience/rising-dream/clip/clip.mp4";
-
-import bh01 from "~assets/experience/rising-dream/pics/bh01.webp";
-import bh02 from "~assets/experience/rising-dream/pics/bh02.webp";
-import bh03 from "~assets/experience/rising-dream/pics/bh03.webp";
-import bh04 from "~assets/experience/rising-dream/pics/bh04.webp";
-import bh05 from "~assets/experience/rising-dream/pics/bh05.webp";
-import bh06 from "~assets/experience/rising-dream/pics/bh06.webp";
 import useImagePreloader from "~hooks/useImagePreloader";
+import { getCloudinaryImage, getCloudinaryVideo } from "~/lib/Cloudinary";
+
+const bgBlue = getCloudinaryImage("experience/bg-blue");
+const clip = getCloudinaryVideo("experience/rising-dream/clip/clip");
+const bh01 = getCloudinaryImage("experience/rising-dream/pics/01");
+const bh02 = getCloudinaryImage("experience/rising-dream/pics/02");
+const bh03 = getCloudinaryImage("experience/rising-dream/pics/03");
+const bh04 = getCloudinaryImage("experience/rising-dream/pics/04");
+const bh05 = getCloudinaryImage("experience/rising-dream/pics/05");
+const bh06 = getCloudinaryImage("experience/rising-dream/pics/06");
 
 function RisingDream() {
   useImagePreloader([bh01, bh02, bh03, bh04, bh05, bh06, bgBlue]);

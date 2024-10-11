@@ -1,8 +1,10 @@
 import React from "react";
-import redStar from "~assets/redStar.png";
-import pinkStar from "~assets/pinkStar.png";
 import Animation from "~components/AnimatedComponents/Animation";
 import { cn } from "~/lib/utils/tailwindcss";
+import { getCloudinaryImage } from "~/lib/Cloudinary";
+
+const redStar = getCloudinaryImage("redStar");
+const pinkStar = getCloudinaryImage("pinkStar");
 
 function Headline({
   children,

@@ -1,6 +1,4 @@
-import backgroundSec3 from "~assets/experience/bg-blue.png";
 import HeadlineRow from "~components/Sections/experiences/components/HeadlineRow";
-
 import useImagePreloader from "~hooks/useImagePreloader";
 import Animation from "~components/AnimatedComponents/Animation";
 import VideoPlayer from "~components/Sections/experiences/components/Videoplayer";
@@ -9,16 +7,17 @@ import CustomSwiper from "~components/Sections/experiences/components/CustomSwip
 import { useScreen } from "~hooks/useScreen";
 import { Parallax } from "~components/AnimatedComponents/Parallax";
 import Bubble from "~components/Bubble";
+import { getCloudinaryImage, getCloudinaryVideo } from "~/lib/Cloudinary";
 
-import clip from "~assets/experience/exbear/clip/clip.mp4";
-
-import hFishTank from "~assets/experience/exbear/pics/h-fish-tank.png";
-import vFishTank from "~assets/experience/exbear/pics/v-fish-tank.png";
-import bh01 from "~assets/experience/exbear/pics/bh01.jpeg";
-import bh02 from "~assets/experience/exbear/pics/bh02.jpeg";
-import bh03 from "~assets/experience/exbear/pics/bh03.jpeg";
-import bh04 from "~assets/experience/exbear/pics/bh04.jpeg";
-import starCoral from "~assets/experience/exbear/pics/star-coral.webp";
+const clip = getCloudinaryVideo("experience/exbear/clip/clip");
+const backgroundSec3 = getCloudinaryImage("experience/bg-blue");
+const hFishTank = getCloudinaryImage("experience/exbear/pics/h-fish-tank");
+const vFishTank = getCloudinaryImage("experience/exbear/pics/v-fish-tank");
+const starCoral = getCloudinaryImage("experience/exbear/pics/star-coral");
+const bh01 = getCloudinaryImage("experience/exbear/pics/01");
+const bh02 = getCloudinaryImage("experience/exbear/pics/02");
+const bh03 = getCloudinaryImage("experience/exbear/pics/03");
+const bh04 = getCloudinaryImage("experience/exbear/pics/04");
 
 function Exbear() {
   useImagePreloader([

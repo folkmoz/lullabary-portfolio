@@ -1,16 +1,17 @@
-import bubble1 from "~assets/bubble-1.webp";
-import bubble2 from "~assets/bubble-2.webp";
-import bubble3 from "~assets/bubble-3.webp";
-import bubble4 from "~assets/bubble-4.webp";
-import redBubble from "~assets/red-bubble.webp";
-import bubbleFill from "~assets/profile/bub.png";
-import bubbleBlur from "~assets/profile/bub-blur.png";
-import bubbleMerge from "~assets/profile/bub-merge.png";
-
+import { getCloudinaryImage } from "~/lib/Cloudinary";
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import useImagePreloader from "~/hooks/useImagePreloader";
+
+const bubble1 = getCloudinaryImage("bubble-1");
+const bubble2 = getCloudinaryImage("bubble-2");
+const bubble3 = getCloudinaryImage("bubble-3");
+const bubble4 = getCloudinaryImage("bubble-4");
+const redBubble = getCloudinaryImage("red-bubble");
+const bubbleFill = getCloudinaryImage("profile/bub-fill");
+const bubbleBlur = getCloudinaryImage("profile/bub-blur");
+const bubbleMerge = getCloudinaryImage("profile/bub-merge");
 
 export type BubbleType =
   | "bubble1"

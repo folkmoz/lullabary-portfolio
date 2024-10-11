@@ -1,11 +1,12 @@
 import React from "react";
-import Animation from "~components/AnimatedComponents/Animation";
-
-import pic01 from "~/assets/illustration/02/pic1.jpeg";
-import pic02 from "~/assets/illustration/02/pic2.jpeg";
-import pic03 from "~/assets/illustration/02/pic3.jpeg";
 import CustomSwiper from "~components/Sections/experiences/components/CustomSwiper";
 import useImagePreloader from "~hooks/useImagePreloader";
+import Animation from "~components/AnimatedComponents/Animation";
+import { getCloudinaryImage } from "~/lib/Cloudinary";
+
+const pic01 = getCloudinaryImage("illustration/02/01");
+const pic02 = getCloudinaryImage("illustration/02/02");
+const pic03 = getCloudinaryImage("illustration/02/03");
 
 function Pepsi() {
   useImagePreloader([pic01, pic02, pic03]);

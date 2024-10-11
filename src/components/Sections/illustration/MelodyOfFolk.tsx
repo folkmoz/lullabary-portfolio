@@ -1,17 +1,16 @@
 import React from "react";
-
-import pic01 from "~/assets/illustration/01/pic1.jpeg";
-import pic02 from "~/assets/illustration/01/pic2.jpeg";
-import pic03 from "~/assets/illustration/01/pic3.jpeg";
-
-import clip from "~/assets/illustration/01/clip.mp4";
-
 import useImagePreloader from "~hooks/useImagePreloader";
 import Animation from "~components/AnimatedComponents/Animation";
 import IllusImage from "~components/Sections/illustration/components/IllusImage";
 import VideoPlayer from "~components/Sections/experiences/components/Videoplayer";
 import FullVersionLink from "~components/Sections/illustration/components/FullVersionLink";
 import CustomSwiper from "~components/Sections/experiences/components/CustomSwiper";
+import { getCloudinaryImage, getCloudinaryVideo } from "~/lib/Cloudinary";
+
+const clip = getCloudinaryVideo("illustration/01/clip");
+const pic01 = getCloudinaryImage("illustration/01/01");
+const pic02 = getCloudinaryImage("illustration/01/02");
+const pic03 = getCloudinaryImage("illustration/01/03");
 
 function MelodyOfFolk() {
   useImagePreloader([pic01, pic02, pic03]);

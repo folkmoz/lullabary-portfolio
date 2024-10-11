@@ -4,13 +4,13 @@ import Animation from "~components/AnimatedComponents/Animation";
 import VideoPlayer from "~components/Sections/experiences/components/Videoplayer";
 import FullLinkButton from "~components/Sections/experiences/components/FullLinkButton";
 import CustomSwiper from "~components/Sections/experiences/components/CustomSwiper";
-
-import clip from "~assets/experience/buca/clip/clip.mp4";
-
-import bh01 from "~assets/experience/buca/pics/bh01.webp";
-import bh02 from "~assets/experience/buca/pics/bh02.webp";
-import bh03 from "~assets/experience/buca/pics/bh03.webp";
 import useImagePreloader from "~hooks/useImagePreloader";
+import { getCloudinaryImage, getCloudinaryVideo } from "~/lib/Cloudinary";
+
+const clip = getCloudinaryVideo("experience/buca/clip/clip");
+const bh01 = getCloudinaryImage("experience/buca/pics/01");
+const bh02 = getCloudinaryImage("experience/buca/pics/02");
+const bh03 = getCloudinaryImage("experience/buca/pics/03");
 
 function Buca() {
   useImagePreloader([bh01, bh02, bh03]);

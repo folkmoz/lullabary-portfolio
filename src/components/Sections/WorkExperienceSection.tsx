@@ -1,7 +1,6 @@
 import React from "react";
+import { getCloudinaryImage } from "~/lib/Cloudinary";
 
-import backgroundSec1 from "~assets/experience/not-friend/bg.png";
-import headline from "~assets/experience/headline.png";
 import NotFriends from "~components/Sections/experiences/NotFriends";
 import MillMills from "~components/Sections/experiences/MillMills";
 import Animation from "~components/AnimatedComponents/Animation";
@@ -10,6 +9,9 @@ import useImagePreloader from "~hooks/useImagePreloader";
 import Exbear from "~components/Sections/experiences/Exbear";
 import RisingDream from "~components/Sections/experiences/RisingDream";
 import BUCA from "~components/Sections/experiences/BUCA";
+
+const backgroundSec1 = getCloudinaryImage("experience/not-friend/bg");
+const headline = getCloudinaryImage("experience/headline");
 
 function WorkExperienceSection() {
   useImagePreloader([backgroundSec1, headline]);
