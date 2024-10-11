@@ -4,6 +4,7 @@ import headline from "~/assets/illustration/headline.png";
 import useImagePreloader from "~hooks/useImagePreloader";
 import MelodyOfFolk from "~components/Sections/illustration/MelodyOfFolk";
 import Pepsi from "~components/Sections/illustration/Pepsi";
+import MVs from "~components/Sections/illustration/MVs";
 
 function IllustrationSection() {
   useImagePreloader([headline]);
@@ -13,14 +14,18 @@ function IllustrationSection() {
       id="illustration"
       className="relative flex min-h-svh w-full flex-col overflow-hidden bg-gradient-to-b from-[#51a1b7] to-[#f0f4c8]"
     >
-      <div className="mx-auto flex max-w-[1200px] flex-col items-center justify-center gap-4 p-4">
-        <div className="-mx-4 md:-mb-4 lg:-mx-8 lg:-mb-28">
-          <img src={headline} alt="" />
+      <div className="relative mx-auto flex w-full max-w-[1200px] flex-col gap-4 p-4">
+        <div className="md:-mb-28 lg:-mx-8">
+          <img
+            src={headline}
+            alt="Illustration section logo"
+            className="w-full max-w-full object-contain"
+          />
         </div>
 
         <MelodyOfFolk />
-
         <Pepsi />
+        <MVs />
       </div>
 
       <div className="min-h-dvh"></div>

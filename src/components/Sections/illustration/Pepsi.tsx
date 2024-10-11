@@ -11,13 +11,13 @@ function Pepsi() {
   useImagePreloader([pic01, pic02, pic03]);
 
   return (
-    <div className="mt-10 flex min-h-dvh w-full flex-col">
+    <div className="mt-10 flex h-full w-full flex-col">
       <div className="mb-4 space-y-1">
-        <h2 className="font-bold">
+        <h2 className="flex flex-col font-bold lg:flex-row">
           <span className="font-thai md:text-3xl">
             PEPSIPresentedTPOPconfest2
           </span>
-          <span className="ml-4 font-andalos text-xl">
+          <span className="font-andalos text-sm md:text-xl lg:ml-4">
             Draw a standee for the band CAC (Club after class)
           </span>
         </h2>
@@ -31,8 +31,8 @@ function Pepsi() {
 
       <div>
         <CustomSwiper
-          height="h-[200px] md:h-[400px]"
-          width="max-w-[300px] md:max-w-[350px] lg:max-w-[400px] xl:max-w-[600px]"
+          height="h-[200px] md:h-[300px] lg:h-[400px]"
+          width="max-w-[300px] md:max-w-[400px] xl:max-w-[600px]"
           images={[pic01, pic02, pic03]}
         />
       </div>

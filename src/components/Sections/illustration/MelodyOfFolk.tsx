@@ -17,14 +17,14 @@ function MelodyOfFolk() {
   useImagePreloader([pic01, pic02, pic03]);
 
   return (
-    <div className="flex min-h-dvh w-full flex-col">
+    <div className="relative flex w-full flex-col">
       <div className="mb-4 space-y-1">
         <h2 className="font-bold md:text-3xl">
           <span className="font-thai">โครงการลำนำศิลป์ พื้นถิ่นไทย </span>
           <span className="font-andalos">(The Melody of Folk Art) Contest</span>
         </h2>
         <div className="text-sm md:mt-4 md:text-lg lg:text-xl">
-          <Animation.TextReveal className="-space-y-2 text-gray-700 lg:space-y-2">
+          <Animation.TextReveal className="max-w-[95%] -space-y-2 pr-4 text-gray-700 lg:max-w-full lg:space-y-2">
             received the second runner-up award and popular vote award in this
             project, I served as the illustration
           </Animation.TextReveal>

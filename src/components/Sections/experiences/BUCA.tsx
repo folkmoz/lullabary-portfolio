@@ -17,7 +17,7 @@ function Buca() {
 
   return (
     <div className="relative z-[1] w-full bg-secondary py-4 md:mt-14 md:py-10">
-      <div className="h relative mx-auto flex w-full max-w-[1200px] flex-col p-4">
+      <div className="relative mx-auto flex w-full max-w-[1200px] flex-col p-4">
         <HeadlineRow
           title="Art Director"
           subtitle="Ads opening BUCA Talent 11"

@@ -31,7 +31,7 @@ function HeadlineRow({
       </div>
       <div
         className={cn(
-          "text-sm md:text-lg lg:text-xl",
+          "max-w-[95%] text-sm md:text-lg lg:max-w-full lg:text-xl",
           subtitle ? "md:mt-4" : "mt-6",
         )}
       >

@@ -40,7 +40,7 @@ function Exbear() {
         backgroundImage: `url(${backgroundSec3})`,
         zIndex: 2,
       }}
-      className="shadow-custom-b relative min-h-dvh bg-cover bg-no-repeat pb-[0dvh] lg:pb-0"
+      className="shadow-custom-b relative min-h-dvh bg-cover bg-no-repeat md:pb-[20dvh] lg:pb-0"
     >
       <div className="relative mx-auto flex min-h-dvh w-full max-w-[1200px] flex-col p-4">
         <HeadlineRow
@@ -66,7 +66,7 @@ function Exbear() {
               </div>
 
               <div className="w-full items-center lg:flex lg:w-1/3">
-                <div className="absolute bottom-32 left-0 right-0 flex scale-[2] justify-center lg:relative lg:bottom-0 lg:ml-24 lg:block lg:scale-100">
+                <div className="absolute bottom-32 left-0 right-0 flex scale-[2] justify-center md:bottom-40 md:scale-[1.5] lg:relative lg:bottom-0 lg:ml-24 lg:block lg:scale-100">
                   <FullLinkButton
                     href={"https://www.youtube.com/watch?v=S5QYZaLa1lQ"}
                   />
@@ -116,7 +116,7 @@ function Exbear() {
 
       <Parallax
         speed={1.3}
-        className="absolute -bottom-20 -right-16 z-[1] size-[200px] md:-bottom-48 md:right-0 md:size-[300px] lg:-right-64 lg:size-[600px] lg:scale-110"
+        className="absolute -bottom-20 -right-16 z-[1] size-[200px] md:right-0 md:size-[300px] lg:-bottom-48 lg:-right-64 lg:size-[600px] lg:scale-110"
       >
         <img src={starCoral} alt="pink star coral" />
       </Parallax>

@@ -53,6 +53,8 @@ function App() {
           <ProfileSection />
           <WorkExperienceSection />
 
+          <IllustrationSection />
+
           <PreloaderCounter finishLoading={() => setIsPreloading(false)} />
         </main>
       )}
