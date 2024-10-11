@@ -47,7 +47,7 @@ function App() {
 
   return (
     <>
-      {!config.isPreview ? (
+      {config.isPreview ? (
         <>
           {/*<WorkExperienceSection />*/}
 
