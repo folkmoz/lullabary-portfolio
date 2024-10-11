@@ -47,27 +47,19 @@ function App() {
 
   return (
     <>
-      {config.isPreview ? (
-        <>
-          <WorkExperienceSection />
+      <main
+        ref={rootElRef}
+        className="relative flex w-full flex-col justify-center overflow-hidden"
+      >
+        <HeroSection isPreloading={isPreloading} rootElm={rootElRef} />
 
-          <IllustrationSection />
-        </>
-      ) : (
-        <main
-          ref={rootElRef}
-          className="relative flex w-full flex-col justify-center overflow-hidden"
-        >
-          <HeroSection isPreloading={isPreloading} rootElm={rootElRef} />
+        <IntroduceSection />
+        <ProfileSection />
+        <WorkExperienceSection />
+        <IllustrationSection />
 
-          <IntroduceSection />
-          <ProfileSection />
-          <WorkExperienceSection />
-          <IllustrationSection />
-
-          <PreloaderCounter finishLoading={() => setIsPreloading(false)} />
-        </main>
-      )}
+        <PreloaderCounter finishLoading={() => setIsPreloading(false)} />
+      </main>
     </>
   );
 }

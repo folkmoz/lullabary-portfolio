@@ -41,12 +41,12 @@ function IntroduceSection() {
         {
           x: 150,
           rotate: 0,
-          y: 100,
+          y: 300,
         },
         {
           rotate: 40,
-          x: -320,
-          y: -350,
+          x: -250,
+          y: -150,
           scrollTrigger: {
             trigger: containerRef.current,
             start: "top center",
@@ -101,7 +101,7 @@ function IntroduceSection() {
           </ColTextReveal>
         </div>
 
-        <div className="mt-32 flex flex-col lg:mt-[30svh] lg:flex-row">
+        <div className="mt-32 flex flex-col lg:mt-[40lvh] lg:flex-row">
           <div
             style={{
               transform: "scaleX(-1) translateX(50%) rotate(-20deg)",

@@ -15,9 +15,9 @@ export function useScreen() {
         height: window.innerHeight,
       });
 
-      if (window.innerWidth < 768) {
+      if (window.innerWidth <= 768) {
         setDevice("mobile");
-      } else if (window.innerWidth < 1024) {
+      } else if (window.innerWidth <= 1180) {
         setDevice("tablet");
       } else {
         setDevice("desktop");

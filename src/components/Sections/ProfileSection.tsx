@@ -45,7 +45,7 @@ function ProfileSection() {
   }, []);
 
   useGSAP(() => {
-    if (device === "desktop") {
+    if (device !== "mobile") {
       ScrollTrigger.create({
         id: "profile-pinned",
         trigger: profileContainer.current!,
@@ -142,16 +142,17 @@ function ProfileSection() {
           style={{
             boxShadow: "0 15px 0px 0px #80959F",
           }}
-          className="h-full w-full overflow-hidden rounded-[150px] border border-primary bg-[#333] py-20 md:rounded-[250px]"
+          className="h-full w-full overflow-hidden rounded-[150px] border border-primary bg-[#333] py-20 md:rounded-[250px] lg:py-10 xl:py-20"
         >
-          <div className="flex h-full w-full flex-col bg-secondary px-2 pb-6 pt-6 md:px-8 md:pt-10 lg:flex-row lg:gap-0">
+          <div className="flex h-full w-full flex-col bg-secondary px-2 pb-6 pt-6 md:px-8 md:pt-10 lg:flex-row lg:gap-0 lg:py-0 xl:pt-10">
             <div className="relative flex h-full flex-1 items-center">
               <img
                 ref={sponge01Ref}
                 src={sponge01}
                 alt="sponge"
                 className={cn("absolute top-0", {
-                  "right-0": device !== "desktop",
+                  "right-20": device === "tablet",
+                  "right-0": device === "mobile",
                 })}
               />
 
@@ -184,7 +185,7 @@ function ProfileSection() {
             </div>
             <div className="flex h-full flex-1 flex-col pt-4 lg:pb-10 lg:pr-8">
               <Animation.Slide direction="right">
-                <div className="text-center font-andalos text-4xl leading-[6vw] md:text-3xl lg:text-[6vw]">
+                <div className="text-center font-andalos text-4xl leading-[6vw] md:text-3xl lg:-mb-4 lg:mt-4 lg:text-[6vw] xl:my-0">
                   <p>
                     <span className="uppercase text-[#AB100B]">Profile</span>
                   </p>
@@ -230,7 +231,7 @@ function ProfileSection() {
       <div
         id="whitespace-profile"
         ref={whitespace}
-        className="relative hidden h-[120svh] lg:block"
+        className="relative hidden h-[120lvh] lg:block"
       >
         {createBubble()}
 

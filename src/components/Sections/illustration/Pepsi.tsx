@@ -32,7 +32,7 @@ function Pepsi() {
       <div>
         <CustomSwiper
           height="h-[200px] md:h-[300px] lg:h-[400px]"
-          width="max-w-[300px] md:max-w-[400px] xl:max-w-[600px]"
+          width="max-w-[300px] md:max-w-[400px] lg:max-w-[600px]"
           images={[pic01, pic02, pic03]}
         />
       </div>

@@ -52,7 +52,7 @@ function Exbear() {
 
         <div className="relative z-[2] flex min-h-lvh flex-col gap-4 lg:flex-row lg:gap-8">
           <img
-            src={device === "desktop" ? hFishTank : vFishTank}
+            src={device !== "mobile" ? hFishTank : vFishTank}
             alt=""
             className="absolute z-0 w-full lg:rotate-[-1deg] lg:scale-[1.05]"
           />
