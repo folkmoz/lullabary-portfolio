@@ -28,7 +28,7 @@ function IllustrationSection() {
         <MVs />
       </div>
 
-      <div className="min-h-dvh"></div>
+      <div className="min-h-lvh"></div>
     </section>
   );
 }

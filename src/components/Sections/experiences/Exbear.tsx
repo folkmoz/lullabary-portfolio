@@ -50,7 +50,7 @@ function Exbear() {
           description="I handled the art direction, managed the mood, tone, and costumes, and was responsible for editing the mv. I also drew and animated theanimations for the MV. I designed the music video tone using pink and purple tones to convey the charm of the girl we secretly admire but I didn’t want it to be overly sweet,so I Add green and blue to give it a cooler style."
         />
 
-        <div className="relative z-[2] flex min-h-dvh flex-col gap-4 lg:flex-row lg:gap-8">
+        <div className="relative z-[2] flex min-h-lvh flex-col gap-4 lg:flex-row lg:gap-8">
           <img
             src={device === "desktop" ? hFishTank : vFishTank}
             alt=""

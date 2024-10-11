@@ -34,7 +34,7 @@ function RisingDream() {
         style={{
           background: `url(${bgBlue}) no-repeat center / cover`,
         }}
-        className="shadow-custom-y mt-20 min-h-[80dvh] w-full py-10"
+        className="shadow-custom-y mt-20 min-h-[80lvh] w-full py-10"
       >
         <div className="h relative mx-auto flex w-full max-w-[1200px] flex-col p-4">
           <div className="w-full">
