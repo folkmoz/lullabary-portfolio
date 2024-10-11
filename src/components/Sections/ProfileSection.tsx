@@ -45,7 +45,7 @@ function ProfileSection() {
   }, []);
 
   useGSAP(() => {
-    if (device !== "mobile") {
+    if (device === "desktop") {
       ScrollTrigger.create({
         id: "profile-pinned",
         trigger: profileContainer.current!,
