@@ -16,7 +16,7 @@
         font-style: normal;
         font-weight: 400;
         font-display: swap;
-        src: url('./assets/fonts/Andalos.otf') format('opentype');
+        src: url('/fonts/Andalos.otf') format('opentype');
     }
 
     @font-face {
@@ -24,7 +24,7 @@
         font-style: normal;
         font-weight: 400;
         font-display: swap;
-        src: url('./assets/fonts/le-murmure.otf') format('opentype');
+        src: url('/fonts/le-murmure.otf') format('opentype');
     }
 
     @font-face {
@@ -32,7 +32,7 @@
         font-style: normal;
         font-weight: 700;
         font-display: swap;
-        src: url('./assets/fonts/VarentGrotesk-Bold.otf') format('opentype');
+        src: url('/fonts/VarentGrotesk-Bold.otf') format('opentype');
     }
 
     @font-face {
@@ -40,7 +40,7 @@
         font-style: italic;
         font-weight: 200;
         font-display: swap;
-        src: url('./assets/fonts/Wagon-ExtralightItalic.otf') format('opentype');
+        src: url('/fonts/Wagon-ExtralightItalic.otf') format('opentype');
     }
 
     @font-face {
@@ -48,14 +48,14 @@
         font-style: normal;
         font-weight: 300;
         font-display: swap;
-        src: url('./assets/fonts/Wagon-Extralight.otf') format('opentype');
+        src: url('/fonts/Wagon-Extralight.otf') format('opentype');
     }
     @font-face {
         font-family: 'Wagon';
         font-style: normal;
         font-weight: 700;
         font-display: swap;
-        src: url('./assets/fonts/Wagon-Bold.otf') format('opentype');
+        src: url('/fonts/Wagon-Bold.otf') format('opentype');
     }
 
 
