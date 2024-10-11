@@ -1,4 +1,3 @@
-// import primaryBg from "~assets/bg/bg-primary.png";
 import primaryBg from "~assets/bg/bg-primary.webp";
 import fish2 from "~assets/fish2.png";
 import fish1 from "~assets/fish1.png";
@@ -244,7 +243,7 @@ function HeroSection({
       <div
         style={{
           zIndex: -1,
-          background: `url(${primaryBg}) no-repeat center bottom/cover`,
+          background: `url('/images/bg/bg-primary.webp') no-repeat center bottom/cover`,
         }}
         className="fixed inset-0 bg-white"
       ></div>

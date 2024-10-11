@@ -5,13 +5,23 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import { CustomEase } from "gsap/CustomEase";
 import { useGSAP } from "@gsap/react";
+import { config } from "~/config";
+
 import HeroSection from "~components/Sections/HeroSection";
 import PreloaderCounter from "~components/Preloader";
-import IntroduceSection from "~components/Sections/IntroduceSection";
-import ProfileSection from "~components/Sections/ProfileSection";
-import WorkExperienceSection from "~components/Sections/WorkExperienceSection";
-import { config } from "~/config";
-import IllustrationSection from "~components/Sections/IllustrationSection";
+
+const IntroduceSection = React.lazy(
+  () => import("~components/Sections/IntroduceSection"),
+);
+const ProfileSection = React.lazy(
+  () => import("~components/Sections/ProfileSection"),
+);
+const WorkExperienceSection = React.lazy(
+  () => import("~components/Sections/WorkExperienceSection"),
+);
+const IllustrationSection = React.lazy(
+  () => import("~components/Sections/IllustrationSection"),
+);
 
 gsap.registerPlugin(CustomEase);
 gsap.registerPlugin(ScrollTrigger);
@@ -49,10 +59,10 @@ function App() {
           className="relative flex min-h-dvh w-full flex-col justify-center overflow-hidden"
         >
           <HeroSection isPreloading={isPreloading} rootElm={rootElRef} />
+
           <IntroduceSection />
           <ProfileSection />
           <WorkExperienceSection />
-
           <IllustrationSection />
 
           <PreloaderCounter finishLoading={() => setIsPreloading(false)} />
