@@ -42,7 +42,7 @@ function Exbear() {
       }}
       className="shadow-custom-b relative bg-cover bg-no-repeat md:pb-[20lvh] lg:pb-0"
     >
-      <div className="relative mx-auto flex w-full max-w-[1200px] flex-col p-4">
+      <div className="relative mx-auto flex w-full max-w-[1200px] flex-col p-4 pb-40 md:pb-4">
         <HeadlineRow
           starColor="pink"
           title="Art Director"
@@ -66,7 +66,7 @@ function Exbear() {
               </div>
 
               <div className="w-full items-center lg:flex lg:w-1/3">
-                <div className="absolute bottom-32 left-0 right-0 flex scale-[2] justify-center md:bottom-40 md:scale-[1.5] lg:relative lg:bottom-0 lg:ml-24 lg:block lg:scale-100">
+                <div className="absolute bottom-20 left-0 right-0 flex scale-[2] justify-center md:bottom-36 md:scale-[1.4] lg:relative lg:bottom-0 lg:ml-24 lg:block lg:scale-100">
                   <FullLinkButton
                     href={"https://www.youtube.com/watch?v=S5QYZaLa1lQ"}
                   />

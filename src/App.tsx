@@ -49,7 +49,7 @@ function App() {
     <>
       {config.isPreview ? (
         <>
-          {/*<WorkExperienceSection />*/}
+          <WorkExperienceSection />
 
           <IllustrationSection />
         </>
