@@ -134,8 +134,6 @@ Animation.ImageReveal = function Animation({
   const { device } = useScreen();
 
   useGSAP(() => {
-    // if (config.isPreview) return;
-
     if (!device || device === "mobile") {
       return;
     }

@@ -11,7 +11,7 @@ function Subtitle({
   return (
     <h3
       className={cn(
-        "mt-4 w-fit text-left text-sm font-bold md:mt-0 lg:mt-3 lg:text-xl xl:mt-4",
+        "mt-4 w-fit text-left text-sm font-bold md:mt-0 lg:mt-1.5 lg:text-xl xl:mt-4",
         {
           "xl:text-3xl": textLength < 50,
         },

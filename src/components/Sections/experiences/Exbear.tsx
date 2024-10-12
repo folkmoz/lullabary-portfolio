@@ -41,7 +41,7 @@ function Exbear() {
       }}
       className="shadow-custom-b relative bg-cover bg-no-repeat md:pb-[20lvh] lg:pb-0"
     >
-      <div className="relative mx-auto flex w-full max-w-[1200px] flex-col p-4 pb-40 md:pb-4">
+      <div className="relative mx-auto flex w-full max-w-[1200px] flex-col p-4 pb-40 md:px-8 md:pb-4 xl:px-4">
         <HeadlineRow
           starColor="pink"
           title="Art Director"

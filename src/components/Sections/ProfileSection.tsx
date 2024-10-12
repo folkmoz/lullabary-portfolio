@@ -90,12 +90,12 @@ function ProfileSection() {
     const bubbleSizes = [
       "size-12",
       "size-20",
-      "md:size-24",
-      "md:size-48",
-      "md:size-36",
-      "lg:size-60",
-      "lg:size-72",
-      "lg:size-96",
+      "lg:size-24",
+      "lg:size-48",
+      "lg:size-36",
+      "xl:size-60",
+      "xl:size-72",
+      "xl:size-96",
     ];
 
     const randomOpacity = () =>
@@ -245,7 +245,7 @@ function ProfileSection() {
           rotate={"90"}
           className="absolute -right-20 top-[80%] size-24 lg:size-60"
         >
-          <Bubble type={"bubble-merge"} />
+          <Bubble type={"bubble-merge"} drag={false} />
         </Parallax>
 
         <Parallax
@@ -256,7 +256,7 @@ function ProfileSection() {
           rotate={"100"}
           className="absolute -left-12 top-1/2 size-24 lg:size-72"
         >
-          <Bubble type={"bubble-blur"} />
+          <Bubble type={"bubble-blur"} drag={false} />
         </Parallax>
 
         <Parallax
@@ -267,7 +267,7 @@ function ProfileSection() {
           rotate={"140"}
           className="absolute bottom-0 right-1/2 size-24 lg:size-72"
         >
-          <Bubble type={"bubble-blur"} />
+          <Bubble type={"bubble-blur"} drag={false} />
         </Parallax>
 
         <Parallax
@@ -278,7 +278,7 @@ function ProfileSection() {
           rotate={"90"}
           className="absolute right-12 top-1/2 size-24 lg:size-48"
         >
-          <Bubble type={"bubble-fill"} />
+          <Bubble type={"bubble-fill"} drag={false} />
         </Parallax>
 
         <Parallax
@@ -289,7 +289,7 @@ function ProfileSection() {
           rotate={"60"}
           className="absolute -top-20 left-20 size-24 lg:size-48"
         >
-          <Bubble type={"bubble-merge"} />
+          <Bubble type={"bubble-merge"} drag={false} />
         </Parallax>
 
         <Parallax
@@ -300,7 +300,7 @@ function ProfileSection() {
           rotate={"320"}
           className="absolute -right-40 -top-40 size-24 lg:size-96"
         >
-          <Bubble type={"bubble-blur"} />
+          <Bubble type={"bubble-blur"} drag={false} />
         </Parallax>
       </div>
     </section>

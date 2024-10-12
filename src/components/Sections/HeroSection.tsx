@@ -63,7 +63,7 @@ function HeroSection({
       tablet: {
         rotate: -30,
         x: -50,
-        y: 200,
+        y: 150,
       },
 
       desktop: {
@@ -226,11 +226,11 @@ function HeroSection({
         start={"top top"}
         end={"bottom top"}
       >
-        <Bubble type={"bubble1"} />
+        <Bubble type={"bubble1"} drag={false} />
       </Parallax>
 
       <Parallax className="absolute bottom-20 left-10 size-20 md:left-72 md:size-40">
-        <Bubble type={"bubble2"} direction="right" />
+        <Bubble type={"bubble2"} direction="right" drag={false} />
       </Parallax>
 
       <Parallax
@@ -240,7 +240,7 @@ function HeroSection({
         start={"top top"}
         end={"bottom top"}
       >
-        <Bubble type={"bubble3"} />
+        <Bubble type={"bubble3"} drag={false} />
       </Parallax>
 
       <div

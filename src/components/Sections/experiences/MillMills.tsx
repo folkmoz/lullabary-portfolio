@@ -21,7 +21,7 @@ function MillMills() {
 
   return (
     <div className="relative z-[1] mt-14 w-full rounded-[60px] bg-secondary py-10 shadow-[0px_-4px_10px_4px_rgba(0,0,0,.45)]">
-      <div className="relative mx-auto flex w-full max-w-[1200px] flex-col p-4">
+      <div className="relative mx-auto flex w-full max-w-[1200px] flex-col p-4 md:px-8 xl:px-4">
         <HeadlineRow
           title="Art Director"
           subtitle="MillMills — คนเคยรักกัน (Official Music Video)"

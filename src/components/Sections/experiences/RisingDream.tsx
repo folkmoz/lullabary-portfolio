@@ -21,7 +21,7 @@ function RisingDream() {
 
   return (
     <div className="relative z-[1] mt-14 w-full bg-secondary py-10">
-      <div className="relative mx-auto flex w-full max-w-[1200px] flex-col p-4">
+      <div className="relative mx-auto flex w-full max-w-[1200px] flex-col p-4 md:px-8 xl:px-4">
         <HeadlineRow
           title="Art Director"
           subtitle="Rising to your dream [Official MV]"
@@ -35,7 +35,7 @@ function RisingDream() {
         }}
         className="shadow-custom-y mt-20 min-h-[80lvh] w-full py-10"
       >
-        <div className="h relative mx-auto flex w-full max-w-[1200px] flex-col p-4">
+        <div className="h relative mx-auto flex w-full max-w-[1200px] flex-col p-4 md:px-8 xl:px-4">
           <div className="w-full">
             <div className="flex flex-col gap-2 lg:flex-row">
               <div className="relative w-full lg:w-1/2">

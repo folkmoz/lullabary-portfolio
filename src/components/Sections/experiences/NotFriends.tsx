@@ -16,7 +16,7 @@ const showcase = getCloudinaryImage("experience/not-friend/pics/showcase");
 
 function NotFriends() {
   return (
-    <div className="relative mx-auto flex w-full max-w-[1200px] flex-col p-4 lg:mt-20">
+    <div className="relative mx-auto flex w-full max-w-[1200px] flex-col p-4 md:px-8 lg:mt-20 xl:px-4">
       <HeadlineRow
         starColor="pink"
         title="Art Director"

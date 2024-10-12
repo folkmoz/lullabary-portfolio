@@ -38,7 +38,7 @@ function ClockWork() {
       }}
       className="relative -mb-1 -mt-24 overflow-hidden bg-cover bg-no-repeat pb-[30lvh] pt-40 lg:pb-20"
     >
-      <div className="relative mx-auto flex w-full max-w-[1200px] flex-col p-4">
+      <div className="relative mx-auto flex w-full max-w-[1200px] flex-col p-4 md:px-8 xl:px-4">
         <HeadlineRow
           starColor="pink"
           title="Art Director"
