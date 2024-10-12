@@ -1,3 +1,7 @@
+const devPreview = false;
+
+const mode = import.meta.env.MODE;
+
 export const config = {
-  isPreview: import.meta.env.MODE !== "development",
+  isPreview: mode === "development" ? devPreview : false,
 };
