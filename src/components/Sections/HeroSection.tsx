@@ -6,9 +6,9 @@ import { useScreen } from "~/hooks/useScreen";
 import { Parallax } from "~components/AnimatedComponents/Parallax";
 import Bubble from "~components/Bubble";
 import { cn } from "~/lib/utils/tailwindcss";
+import { config } from "~/config";
 import useImagePreloader from "~hooks/useImagePreloader";
 import { getCloudinaryImage } from "~/lib/Cloudinary";
-import { config } from "~/config";
 
 const primaryBg = getCloudinaryImage("bg/bg-primary");
 const fish2 = getCloudinaryImage("fish02");
