@@ -112,10 +112,12 @@ function HeroSection({
 
     if (isPreloading || !device) return;
 
-    const isDesktop = device === "desktop";
+    const isMobile = device === "mobile";
+
+    // return;
 
     gsap.to(heroSectionRef.current, {
-      clipPath: isDesktop ? "inset(0px 0px 0px)" : "inset(0px 0px)",
+      clipPath: isMobile ? "inset(0px 0px)" : "inset(0px 0px 0px)",
       duration: 1,
       ease: "expo.inOut",
       onComplete: () => {
