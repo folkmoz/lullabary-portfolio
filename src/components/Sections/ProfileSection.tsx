@@ -9,12 +9,6 @@ import { useScreen } from "~hooks/useScreen";
 import { cn } from "~/lib/utils/tailwindcss";
 import { getCloudinaryImage } from "~/lib/Cloudinary";
 
-// import profileImage from "~assets/profile/profile.png";
-// import sponge01 from "~assets/profile/sponge01.png";
-// import sponge02 from "~assets/profile/sponge02.png";
-// import smallFish01 from "~assets/profile/smallFish01.png";
-// import smallFish02 from "~assets/profile/smallFish02.png";
-
 const profileImage = getCloudinaryImage("profile/profile");
 const sponge01 = getCloudinaryImage("profile/sponge-01");
 const sponge02 = getCloudinaryImage("profile/sponge-02");
@@ -125,6 +119,7 @@ function ProfileSection() {
             className={bubbleClasses[index % bubbleClasses.length]}
           >
             <Bubble
+              drag={false}
               type={
                 `bubble-${["merge", "blur", "fill"][index % 3]}` as BubbleType
               }

@@ -132,7 +132,7 @@ function PreloaderCounter({ finishLoading }: { finishLoading: () => void }) {
       </div>
       <h1
         ref={counterRef}
-        className="absolute bottom-0 right-4 flex h-[10vw] w-[10vw] items-center justify-center font-wagon text-[10vw] italic leading-[10vw] md:right-10 lg:right-16"
+        className="absolute bottom-0 right-14 flex h-[10vw] w-[10vw] items-center justify-center px-4 font-wagon text-[10vw] italic leading-[10vw] md:right-10 lg:right-16"
       >
         0
       </h1>

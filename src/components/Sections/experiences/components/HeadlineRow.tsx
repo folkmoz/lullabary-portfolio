@@ -35,7 +35,7 @@ function HeadlineRow({
           subtitle ? "md:mt-4" : "mt-6",
         )}
       >
-        <Animation.TextReveal className="mt-2 -space-y-2 text-gray-800 md:mt-0 lg:space-y-2">
+        <Animation.TextReveal className="mt-2 -space-y-2 text-gray-800 md:mt-0 lg:space-y-2 xl:space-y-0">
           {description}
         </Animation.TextReveal>
       </div>

@@ -38,8 +38,7 @@ function HeroSection({
     if (isPreloading && device) {
       lenis?.stop();
 
-      const isMobile = device === "mobile";
-      const isDesktop = device === "desktop";
+      const isMobile = width < 768;
 
       const size = isMobile ? 150 : 300;
 
@@ -47,7 +46,7 @@ function HeroSection({
       const top = Math.ceil(height / 2 - size);
       const bottom = Math.ceil(height - size);
 
-      heroSectionRef!.current!.style.clipPath = isDesktop
+      heroSectionRef!.current!.style.clipPath = !isMobile
         ? `inset(${top}px ${aside}px ${bottom}px ${aside}px)`
         : `inset(${top}px ${aside}px ${top}px ${aside}px)`;
     }
@@ -179,7 +178,7 @@ function HeroSection({
       id={"hero"}
       ref={heroSectionRef}
       style={{
-        clipPath: config.isPreview ? "unset" : "inset(0px 0px 0px)",
+        clipPath: config.isPreview ? "unset" : "inset(50% 0px 50% 0px)",
       }}
       className="pointer-events-none relative flex min-h-lvh w-full flex-col justify-center lg:min-h-[150svh]"
     >

@@ -27,8 +27,8 @@ function WorkExperienceSection() {
       ></div>
 
       <div className="relative flex w-full flex-col">
-        <div className="flex w-full items-center justify-center">
-          <Animation.Slide start="top 90%" end="top 20%">
+        <div className="flex w-full items-center justify-center xl:scale-125">
+          <Animation.Slide start="top 90%" end="top 20%" direction="bottom">
             <img src={headline} alt="heading" />
           </Animation.Slide>
         </div>
