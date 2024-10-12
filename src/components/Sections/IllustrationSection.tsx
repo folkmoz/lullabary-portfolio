@@ -4,6 +4,7 @@ import useImagePreloader from "~hooks/useImagePreloader";
 import MelodyOfFolk from "~components/Sections/illustration/MelodyOfFolk";
 import Pepsi from "~components/Sections/illustration/Pepsi";
 import MVs from "~components/Sections/illustration/MVs";
+import BadgesSoiju from "~components/Sections/illustration/BadgesSoiju";
 
 const headline = getCloudinaryImage("illustration/headline");
 
@@ -15,7 +16,7 @@ function IllustrationSection() {
       id="illustration"
       className="relative flex w-full flex-col overflow-hidden bg-gradient-to-b from-[#51a1b7] to-[#f0f4c8] pt-20"
     >
-      <div className="absolute left-0 top-0 z-[4] w-full -translate-y-1">
+      <div className="absolute left-0 top-0 w-full -translate-y-1">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
             fill="#ECEDD0"
@@ -36,9 +37,15 @@ function IllustrationSection() {
         <MelodyOfFolk />
         <Pepsi />
         <MVs />
+        <BadgesSoiju />
       </div>
 
-      <div className="min-h-lvh"></div>
+      <div className="min-h-lvh">
+        <div>
+          <h1 className="font-bella text-[13vw]">Artworks</h1>
+          <h1 className="font-bella text-[13vw]">Productions</h1>
+        </div>
+      </div>
     </section>
   );
 }

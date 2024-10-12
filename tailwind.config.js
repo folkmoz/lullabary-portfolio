@@ -14,6 +14,7 @@ export default {
         "le-murmure": ["Le Murmure", "sans-serif"],
         andalos: ["Andalos", "sans-serif"],
         thai: ["IBM Plex Sans Thai", "sans-serif"],
+        bella: ["Bella Sophie", "sans-serif"],
       },
 
       keyframes: {

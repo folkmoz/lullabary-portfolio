@@ -12,6 +12,14 @@
 
 
     @font-face {
+        font-family: "BELLA SOPHIE";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url('/fonts/BellasophieRegular.otf') format('opentype');
+    }
+
+    @font-face {
         font-family: 'Andalos';
         font-style: normal;
         font-weight: 400;
