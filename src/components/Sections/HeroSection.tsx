@@ -116,7 +116,7 @@ function HeroSection({
 
     const isMobile = device === "mobile";
 
-    return;
+    // return;
 
     gsap.to(heroSectionRef.current, {
       clipPath: isMobile ? "inset(0px 0px)" : "inset(0px 0px 0px)",
