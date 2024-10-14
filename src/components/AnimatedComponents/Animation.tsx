@@ -1,5 +1,6 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "~/lib/utils/splitText";
 import { useScreen } from "~hooks/useScreen";
@@ -131,64 +132,81 @@ Animation.ImageReveal = function Animation({
   end?: string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
+  const [isLoaded, setIsLoaded] = useState(false);
+
   const { device } = useScreen();
 
   useGSAP(() => {
+    if (!ref.current) return;
+
+    if (!isLoaded) {
+      const media = ref.current.querySelector("img, video") as
+        | HTMLImageElement
+        | HTMLVideoElement;
+
+      if (!media) return;
+
+      media.onload = media.onloadeddata = () => {
+        setIsLoaded(true);
+        ScrollTrigger.refresh();
+      };
+    }
+
     if (!device || device === "mobile") {
       return;
     }
 
-    const tl = gsap.timeline();
-
-    tl.from(ref.current, {
-      clipPath: "inset(100% 0 0 0)",
+    const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ref.current,
         start: start,
         end: end,
         scrub: 1,
         once: once,
+        markers: true,
         toggleActions: once ? "play none none none" : "play none none none",
       },
     });
 
-    if (withScale) {
-      const img = ref.current!.firstChild as HTMLImageElement;
+    tl.fromTo(
+      ref.current,
+      {
+        clipPath: "inset(100% 0% 0% 0%)",
+      },
+      {
+        clipPath: "inset(0% 0% 0% 0%)",
+        // duration: 1,
+        ease: "power2.out",
+      },
+    );
 
-      img.style.transformOrigin = "center";
-      img.style.willChange = "transform";
+    if (withScale) {
+      const media = ref.current.querySelector("img, video") as
+        | HTMLImageElement
+        | HTMLVideoElement;
+
+      if (!media) return;
 
       tl.from(
-        img,
+        media,
         {
           ease: "none",
           scale: 1.5,
-          scrollTrigger: {
-            trigger: ref.current,
-            start: "top bottom",
-            end: "bottom bottom",
-            once: true,
-            toggleActions: "play none none none",
-            scrub: 1,
-          },
         },
-        0,
+        "<",
       );
     }
   }, [device]);
 
-  return React.createElement(
-    "div",
-    {
-      ref,
-      className,
-      style: {
-        overflow: withScale ? "hidden" : "visible",
-        clipPath: "inset(0% 0% 0% 0%)",
-      },
-    },
+  return React.createElement("div", {
+    ref,
+    className,
     children,
-  );
+    style: {
+      position: "relative",
+      overflow: withScale ? "hidden" : "visible",
+    },
+  });
 };
 Animation.Slide = function Animation({
   direction = "top",

@@ -1,11 +1,14 @@
 import React from "react";
 import { getCloudinaryImage } from "~/lib/Cloudinary";
 import Animation from "~components/AnimatedComponents/Animation";
+import useImagePreloader from "~hooks/useImagePreloader";
 
 const pic01 = getCloudinaryImage("illustration/04/01");
 const pic02 = getCloudinaryImage("illustration/04/02");
 
 function BadgesSoiju() {
+  useImagePreloader([pic01, pic02]);
+
   return (
     <div className="mt-10 flex w-full flex-col">
       <div className="mb-4 space-y-1">

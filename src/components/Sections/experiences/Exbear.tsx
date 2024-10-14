@@ -59,7 +59,7 @@ function Exbear() {
           <div className="h-full w-full lg:px-10 lg:pt-14 xl:pt-[4.6rem]">
             <div className="flex flex-col gap-2 px-8 pt-16 md:px-16 md:pt-36 lg:flex-row lg:px-0 lg:pt-4 xl:pt-0">
               <div className="relative w-full lg:w-[55%]">
-                <Animation.ImageReveal end="top 80%">
+                <Animation.ImageReveal end="top top">
                   <VideoPlayer source={clip} />
                 </Animation.ImageReveal>
               </div>

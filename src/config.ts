@@ -1,4 +1,4 @@
-const devPreview = false;
+const devPreview = true;
 
 const mode = import.meta.env.MODE;
 

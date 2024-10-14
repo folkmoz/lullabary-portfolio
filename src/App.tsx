@@ -23,6 +23,10 @@ const IllustrationSection = React.lazy(
   () => import("~components/Sections/IllustrationSection"),
 );
 
+const CreativeSection = React.lazy(
+  () => import("~components/Sections/CreativeSection"),
+);
+
 gsap.registerPlugin(CustomEase);
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(MotionPathPlugin);
@@ -51,12 +55,13 @@ function App() {
         ref={rootElRef}
         className="relative flex w-full flex-col justify-center overflow-hidden"
       >
-        <HeroSection isPreloading={isPreloading} rootElm={rootElRef} />
+        {/*<HeroSection isPreloading={isPreloading} rootElm={rootElRef} />*/}
 
-        <IntroduceSection />
-        <ProfileSection />
-        <WorkExperienceSection />
+        {/*<IntroduceSection />*/}
+        {/*<ProfileSection />*/}
+        {/*<WorkExperienceSection />*/}
         <IllustrationSection />
+        <CreativeSection />
 
         <PreloaderCounter finishLoading={() => setIsPreloading(false)} />
       </main>

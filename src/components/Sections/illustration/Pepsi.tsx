@@ -8,8 +8,10 @@ const pic01 = getCloudinaryImage("illustration/02/01");
 const pic02 = getCloudinaryImage("illustration/02/02");
 const pic03 = getCloudinaryImage("illustration/02/03");
 
+const images = [pic01, pic02, pic03];
+
 function Pepsi() {
-  useImagePreloader([pic01, pic02, pic03]);
+  useImagePreloader(images);
 
   return (
     <div className="mt-10 flex h-full w-full flex-col">
@@ -34,7 +36,7 @@ function Pepsi() {
         <CustomSwiper
           height="h-[200px] md:h-[300px] lg:h-[400px]"
           width="max-w-[300px] md:max-w-[400px] lg:max-w-[600px]"
-          images={[pic01, pic02, pic03]}
+          images={images}
         />
       </div>
     </div>

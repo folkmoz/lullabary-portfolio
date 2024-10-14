@@ -46,11 +46,9 @@ function HeroSection({
       const top = Math.ceil(height / 2 - size);
       const bottom = Math.ceil(height - size);
 
-      console.log({ width, height, aside, top, bottom });
-
       heroSectionRef!.current!.style.clipPath = isMobile
-        ? `inset(${top}px ${aside}px ${bottom}px ${aside}px)`
-        : `inset(${top}px ${aside}px ${top}px ${aside}px)`;
+        ? `inset(${top}px ${aside}px ${top}px ${aside}px)`
+        : `inset(${top}px ${aside}px ${bottom}px ${aside}px)`;
     }
   }, [isPreloading, device]);
 
@@ -115,8 +113,6 @@ function HeroSection({
     if (isPreloading || !device) return;
 
     const isMobile = device === "mobile";
-
-    // return;
 
     gsap.to(heroSectionRef.current, {
       clipPath: isMobile ? "inset(0px 0px)" : "inset(0px 0px 0px)",

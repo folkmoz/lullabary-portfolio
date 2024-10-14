@@ -46,7 +46,10 @@ function NotFriends() {
           </div>
         </div>
         <div className="mt-2">
-          <CustomSwiper images={[bh01, bh02, bh03, bh04]} />
+          <CustomSwiper
+            width={"max-w-[350px]"}
+            images={[bh01, bh02, bh03, bh04]}
+          />
         </div>
       </div>
 

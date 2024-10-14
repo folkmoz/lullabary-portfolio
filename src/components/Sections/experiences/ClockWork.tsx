@@ -91,7 +91,7 @@ function ClockWork() {
       </div>
 
       <Parallax
-        className="absolute bottom-1/3 left-24 z-[1] hidden size-16 md:block"
+        className="poi absolute bottom-1/3 left-24 z-[1] hidden size-16 md:block"
         speed={-4}
         start="top bottom"
       >

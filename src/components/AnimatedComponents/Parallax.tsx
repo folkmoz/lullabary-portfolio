@@ -1,6 +1,7 @@
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 import { useScreen } from "~hooks/useScreen";
+import { cn } from "~/lib/utils/tailwindcss";
 
 export function Parallax({
   className,
@@ -58,7 +59,7 @@ export function Parallax({
   }, [id, speed, windowWidth, start, end, triggerElm]);
 
   return (
-    <div ref={trigger} className={className}>
+    <div ref={trigger} className={cn(className, "pointer-events-none")}>
       <div ref={target} className="will-change-transform">
         {children}
       </div>

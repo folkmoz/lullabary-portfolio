@@ -67,7 +67,7 @@ function MVPreviewItem({
       <Animation.ImageReveal
         once
         start="top bottom"
-        end={`bottom center+=${index * 200}`}
+        end={`bottom center+=${index * 100}`}
       >
         <VideoPlayer source={src} />
       </Animation.ImageReveal>

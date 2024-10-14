@@ -2,9 +2,10 @@ import React from "react";
 import { getCloudinaryImage } from "~/lib/Cloudinary";
 import useImagePreloader from "~hooks/useImagePreloader";
 import MelodyOfFolk from "~components/Sections/illustration/MelodyOfFolk";
-import Pepsi from "~components/Sections/illustration/Pepsi";
+import MagicalOfCreativity from "~components/Sections/illustration/MagicalOfCreativity";
 import MVs from "~components/Sections/illustration/MVs";
 import BadgesSoiju from "~components/Sections/illustration/BadgesSoiju";
+import Pepsi from "~components/Sections/illustration/Pepsi";
 
 const headline = getCloudinaryImage("illustration/headline");
 
@@ -38,14 +39,15 @@ function IllustrationSection() {
         <Pepsi />
         <MVs />
         <BadgesSoiju />
+        <MagicalOfCreativity />
       </div>
 
-      <div className="min-h-lvh">
-        <div>
-          <h1 className="font-bella text-[13vw]">Artworks</h1>
-          <h1 className="font-bella text-[13vw]">Productions</h1>
-        </div>
-      </div>
+      {/*<div className="min-h-lvh">*/}
+      {/*  <div>*/}
+      {/*    <h1 className="font-bella text-[13vw]">Artworks</h1>*/}
+      {/*    <h1 className="font-bella text-[13vw]">Productions</h1>*/}
+      {/*  </div>*/}
+      {/*</div>*/}
     </section>
   );
 }

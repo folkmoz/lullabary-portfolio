@@ -44,14 +44,14 @@ function MelodyOfFolk() {
         </div>
 
         <div className="hidden grid-cols-3 gap-2 lg:grid">
-          <Animation.ImageReveal once withScale end="bottom bottom">
+          <Animation.ImageReveal once withScale end="top center">
             <IllusImage src={pic01} alt="pic1" />
           </Animation.ImageReveal>
-          <Animation.ImageReveal once withScale end="bottom 90%">
+          <Animation.ImageReveal once withScale end="top center-=50">
             <IllusImage src={pic02} alt="pic2" />
           </Animation.ImageReveal>
 
-          <Animation.ImageReveal once withScale end="bottom 80%">
+          <Animation.ImageReveal once withScale end="top center-=100">
             <img
               src={pic03}
               alt="pic3"

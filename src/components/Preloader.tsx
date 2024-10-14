@@ -32,7 +32,7 @@ const heroImages = [
 function PreloaderCounter({ finishLoading }: { finishLoading: () => void }) {
   useImagePreloader(heroImages);
 
-  const contianer = useRef<HTMLDivElement>(null);
+  const container = useRef<HTMLDivElement>(null);
   const imageWrapper = useRef<HTMLDivElement>(null);
   const counterRef = useRef<HTMLHeadingElement>(null);
 
@@ -95,7 +95,7 @@ function PreloaderCounter({ finishLoading }: { finishLoading: () => void }) {
             ease: "power4.inOut",
             onStart: finishLoading,
             onComplete: () => {
-              gsap.to(contianer.current, {
+              gsap.to(container.current, {
                 delay: 1,
                 display: "none",
                 ease: "power4.inOut",
@@ -113,7 +113,7 @@ function PreloaderCounter({ finishLoading }: { finishLoading: () => void }) {
 
   return (
     <div
-      ref={contianer}
+      ref={container}
       className="fixed inset-0 z-[9999] grid place-items-center font-varent text-[20vw] text-primary"
     >
       <div
@@ -132,7 +132,7 @@ function PreloaderCounter({ finishLoading }: { finishLoading: () => void }) {
       </div>
       <h1
         ref={counterRef}
-        className="absolute bottom-0 right-14 flex h-[10vw] w-[10vw] items-center justify-center px-4 font-wagon text-[10vw] italic leading-[10vw] md:right-10 lg:right-16"
+        className="absolute bottom-0 right-6 flex h-[10vw] w-[10vw] items-center justify-center px-4 font-wagon text-[10vw] italic leading-[10vw] md:right-10 lg:right-16"
       >
         0
       </h1>
