@@ -10,10 +10,10 @@ const pic02 = getCloudinaryImage("creativity/02/02");
 function Sheneve() {
   useImagePreloader([pic01, pic02]);
   return (
-    <div className="mt-10">
+    <div>
       <CreativeTitle>Character design Sheneve Vtuber</CreativeTitle>
 
-      <div className="mt-4">
+      <div className="mt-0 md:mt-4">
         <Animation.ImageReveal once withScale end="top 20%">
           <img
             src={pic01}

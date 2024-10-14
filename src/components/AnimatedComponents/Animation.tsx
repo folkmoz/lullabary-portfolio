@@ -163,7 +163,6 @@ Animation.ImageReveal = function Animation({
         end: end,
         scrub: 1,
         once: once,
-        markers: true,
         toggleActions: once ? "play none none none" : "play none none none",
       },
     });

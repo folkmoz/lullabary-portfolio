@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "~/lib/utils/tailwindcss";
 import { useLenis } from "@studio-freight/react-lenis";
 import Portal from "~components/Portal";
+import { useScreen } from "~hooks/useScreen";
 
 function CustomSwiper({
   height = "h-[200px] md:h-[250px]",
@@ -22,12 +23,17 @@ function CustomSwiper({
   const timer = useRef<number | null>(null);
   const ref = useRef<HTMLDivElement>(null);
 
+  const { device } = useScreen();
   const id = useId();
   const lenis = useLenis();
 
   useEffect(() => {
     if (!isMounted) {
       setIsMounted(true);
+      return;
+    }
+
+    if (device === "mobile") {
       return;
     }
 
@@ -40,7 +46,7 @@ function CustomSwiper({
       document.body.style.overflow = "auto";
       document.body.style.marginRight = "0px";
     }
-  }, [selectedImage]);
+  }, [selectedImage, isMounted, device]);
   return (
     <div ref={ref} className="w-fit max-w-full overflow-hidden">
       <motion.div

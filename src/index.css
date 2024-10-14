@@ -67,6 +67,15 @@
     }
 
 
+    @font-face {
+        font-family: "Monotes";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url('/fonts/Monotes.otf') format('opentype');
+    }
+
+
 }
 
 @layer utilities {

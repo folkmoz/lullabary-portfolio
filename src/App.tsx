@@ -9,6 +9,7 @@ import { config } from "~/config";
 
 import HeroSection from "~components/Sections/HeroSection";
 import PreloaderCounter from "~components/Preloader";
+import KeyVisual from "~components/Sections/creativity/KeyVisual";
 
 const IntroduceSection = React.lazy(
   () => import("~components/Sections/IntroduceSection"),
@@ -60,7 +61,7 @@ function App() {
         {/*<IntroduceSection />*/}
         {/*<ProfileSection />*/}
         {/*<WorkExperienceSection />*/}
-        <IllustrationSection />
+        {/*<IllustrationSection />*/}
         <CreativeSection />
 
         <PreloaderCounter finishLoading={() => setIsPreloading(false)} />

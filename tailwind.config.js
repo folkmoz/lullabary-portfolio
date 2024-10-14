@@ -15,6 +15,7 @@ export default {
         andalos: ["Andalos", "sans-serif"],
         thai: ["IBM Plex Sans Thai", "sans-serif"],
         bella: ["Bella Sophie", "sans-serif"],
+        monotes: ["Monotes", "sans-serif"],
       },
 
       keyframes: {

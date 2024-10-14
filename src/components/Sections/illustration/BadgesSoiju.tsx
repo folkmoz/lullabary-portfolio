@@ -27,7 +27,7 @@ function BadgesSoiju() {
         />
       </div>
       <div>
-        <Animation.ImageReveal end="bottom center" start="top bottom">
+        <Animation.ImageReveal once end="bottom center" start="top bottom">
           <img
             src={pic02}
             alt="Badges Soiju membership tier"
