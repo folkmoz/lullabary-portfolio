@@ -7,7 +7,7 @@ function useScroll() {
   const disableScroll = useMemo(() => {
     return () => {
       document.body.style.overflow = "hidden";
-      document.body.style.marginRight = `17px`;
+      document.body.style.marginRight = "17px";
 
       lenis?.stop();
     };
@@ -15,7 +15,7 @@ function useScroll() {
 
   const enableScroll = useMemo(() => {
     return () => {
-      document.body.style.overflow = "";
+      document.body.style.overflow = "auto";
       document.body.style.marginRight = "";
 
       lenis?.start();

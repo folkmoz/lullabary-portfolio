@@ -29,12 +29,12 @@ function CustomSwiper({
   const { enableScroll, disableScroll } = useScroll();
 
   useEffect(() => {
-    if (!isMounted.current) {
-      isMounted.current = true;
+    if (device === "mobile") {
       return;
     }
 
-    if (device === "mobile") {
+    if (!isMounted.current) {
+      isMounted.current = true;
       return;
     }
 
@@ -43,7 +43,7 @@ function CustomSwiper({
     } else {
       enableScroll();
     }
-  }, [selectedImage, device]);
+  }, [selectedImage]);
   return (
     <div ref={ref} className="w-fit max-w-full overflow-hidden">
       <motion.div

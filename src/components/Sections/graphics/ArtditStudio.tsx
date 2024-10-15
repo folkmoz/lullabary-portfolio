@@ -34,7 +34,7 @@ function ArtditStudio() {
           </Animation.ImageReveal>
         </div>
         <div className="flex flex-1 flex-col justify-between">
-          <div className="lg:pt-10">
+          <div className="lg:pt-10 xl:pt-12">
             <Animation.TextReveal>
               ar(t)dit studio is an art studio that creates various types of
               artwork,such as visualizers, motion graphics, illustrations, and
