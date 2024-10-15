@@ -1,13 +1,14 @@
 import { useLenis } from "@studio-freight/react-lenis";
 import { useMemo } from "react";
+import { isMobile } from "react-device-detect";
 
-function useScroll() {
+export default function useScroll() {
   const lenis = useLenis();
 
   const disableScroll = useMemo(() => {
     return () => {
       document.body.style.overflow = "hidden";
-      document.body.style.marginRight = "17px";
+      document.body.style.marginRight = `${isMobile ? 0 : 17}px`;
 
       lenis?.stop();
     };
@@ -24,5 +25,3 @@ function useScroll() {
 
   return { disableScroll, enableScroll };
 }
-
-export default useScroll;

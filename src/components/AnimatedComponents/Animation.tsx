@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "~/lib/utils/splitText";
 import { useScreen } from "~hooks/useScreen";
-import { config } from "~/config";
+import { isMobile } from "react-device-detect";
 
 const Animation = () => {};
 
@@ -76,36 +76,25 @@ Animation.TextReveal = function Animation({
   end?: string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
-  const { device } = useScreen();
 
-  useGSAP(
-    () => {
-      if (!device || device === "mobile") {
-        return;
-      }
+  useGSAP(() => {
+    const splitText = new SplitText(ref.current);
 
-      const splitText = new SplitText(ref.current);
+    if (!splitText.lines.length) return;
 
-      // if (config.isPreview) return;
-
-      gsap.from(splitText.lines, {
-        duration: 1,
-        y: 200,
-        ease: "power4.out",
-        stagger: 0.1,
-        scrollTrigger: {
-          trigger: ref.current,
-          start: start ? start : undefined,
-          end: end ? end : undefined,
-          once: true,
-        },
-      });
-    },
-    {
-      scope: ref,
-      dependencies: [device],
-    },
-  );
+    gsap.from(splitText.lines, {
+      duration: 1,
+      y: 200,
+      ease: "power4.out",
+      stagger: 0.1,
+      scrollTrigger: {
+        trigger: ref.current,
+        start: start ? start : undefined,
+        end: end ? end : undefined,
+        once: true,
+      },
+    });
+  }, []);
 
   return React.createElement(
     "div",
@@ -116,6 +105,7 @@ Animation.TextReveal = function Animation({
     children,
   );
 };
+
 Animation.ImageReveal = function Animation({
   children,
   once = false,
@@ -174,7 +164,6 @@ Animation.ImageReveal = function Animation({
       },
       {
         clipPath: "inset(0% 0% 0% 0%)",
-        // duration: 1,
         ease: "power2.out",
       },
     );

@@ -31,7 +31,7 @@ function Exbear() {
     starCoral,
   ]);
 
-  const { device } = useScreen();
+  const { width } = useScreen();
 
   return (
     <div
@@ -39,9 +39,9 @@ function Exbear() {
         backgroundImage: `url(${backgroundSec3})`,
         zIndex: 2,
       }}
-      className="shadow-custom-b relative bg-cover bg-no-repeat md:pb-[20lvh] lg:pb-0"
+      className="shadow-custom-b relative bg-cover bg-no-repeat md:pb-[40lvh] lg:pb-0"
     >
-      <div className="relative mx-auto flex w-full max-w-[1200px] flex-col p-4 pb-40 md:px-8 md:pb-4 xl:px-4">
+      <div className="relative mx-auto flex w-full max-w-[1200px] flex-col p-4 pb-20 md:px-8 md:pb-4 xl:px-4">
         <HeadlineRow
           starColor="pink"
           title="Art Director"
@@ -51,7 +51,7 @@ function Exbear() {
 
         <div className="relative z-[2] flex min-h-lvh flex-col gap-4 lg:flex-row lg:gap-8">
           <img
-            src={device !== "mobile" ? hFishTank : vFishTank}
+            src={width > 1024 ? hFishTank : vFishTank}
             alt=""
             className="absolute z-0 w-full lg:rotate-[-1deg] lg:scale-[1.05]"
           />
@@ -65,7 +65,7 @@ function Exbear() {
               </div>
 
               <div className="w-full items-center lg:flex lg:w-1/3">
-                <div className="absolute -bottom-8 left-0 right-0 flex scale-[1.8] justify-center md:bottom-36 md:scale-[1.4] lg:relative lg:bottom-0 lg:ml-24 lg:block lg:scale-100">
+                <div className="absolute bottom-28 left-0 right-0 flex scale-[1.8] justify-center md:bottom-10 md:scale-[1.4] lg:relative lg:bottom-0 lg:ml-24 lg:block lg:scale-100">
                   <FullLinkButton
                     href={"https://www.youtube.com/watch?v=S5QYZaLa1lQ"}
                   />
