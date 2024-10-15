@@ -7,6 +7,8 @@ import DentaMate from "~components/Sections/creativity/KVs/DentaMate";
 import TedxSilpakorn from "~components/Sections/creativity/KVs/TedxSilpakorn";
 import Director from "~components/Sections/creativity/KVs/Director";
 import ChibiZaab from "~components/Sections/creativity/KVs/ChibiZaab";
+import UmayPlus from "~components/Sections/creativity/StoryBoard/UmayPlus";
+import DentaMateStoryBoard from "~components/Sections/creativity/StoryBoard/DentaMateStoryBoard";
 
 const redStar = getCloudinaryImage("redStar02");
 const fish = getCloudinaryImage("fish03");
@@ -47,6 +49,9 @@ function KeyVisual() {
         <TedxSilpakorn />
         <Director />
         <ChibiZaab />
+
+        <UmayPlus />
+        <DentaMateStoryBoard />
       </div>
     </div>
   );

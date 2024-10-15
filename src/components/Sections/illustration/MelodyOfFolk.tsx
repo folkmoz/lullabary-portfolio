@@ -6,6 +6,7 @@ import VideoPlayer from "~components/Sections/experiences/components/Videoplayer
 import FullVersionLink from "~components/Sections/illustration/components/FullVersionLink";
 import CustomSwiper from "~components/Sections/experiences/components/CustomSwiper";
 import { getCloudinaryImage, getCloudinaryVideo } from "~/lib/Cloudinary";
+import ImagePortal from "~components/ImagePortal";
 
 const clip = getCloudinaryVideo("illustration/01/clip");
 const pic01 = getCloudinaryImage("illustration/01/01");
@@ -52,11 +53,7 @@ function MelodyOfFolk() {
           </Animation.ImageReveal>
 
           <Animation.ImageReveal once withScale end="top center-=100">
-            <img
-              src={pic03}
-              alt="pic3"
-              className="h-full w-full object-cover"
-            />
+            <IllusImage src={pic03} alt="pic3" />
           </Animation.ImageReveal>
         </div>
       </div>

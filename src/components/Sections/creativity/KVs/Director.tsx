@@ -4,6 +4,7 @@ import KvTitle from "~components/Sections/creativity/components/KVTitle";
 import TextHighlight from "~components/Sections/creativity/components/TextHighlight";
 import useImagePreloader from "~hooks/useImagePreloader";
 import KvParagraph from "~components/Sections/creativity/components/KVParagraph";
+import ImagePortal from "~components/ImagePortal";
 
 const pic01 = getCloudinaryImage("creativity/ kv/04/01");
 const pic02 = getCloudinaryImage("creativity/ kv/04/02");
@@ -33,15 +34,15 @@ function Director() {
       <div className="mt-4">
         <div className="grid grid-cols-2 grid-rows-2 gap-2">
           <div className="col-span-1 row-span-2">
-            <img src={pic01} alt="" className="h-full" />
+            <ImagePortal src={pic01} alt="" className="h-full" />
           </div>
 
           <div className="col-span-1">
-            <img src={pic02} alt="" />
+            <ImagePortal src={pic02} alt="" />
           </div>
 
           <div className="col-span-1">
-            <img src={pic03} alt="" />
+            <ImagePortal src={pic03} alt="" />
           </div>
         </div>
       </div>

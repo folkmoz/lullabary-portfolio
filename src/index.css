@@ -16,7 +16,7 @@
         font-style: normal;
         font-weight: 400;
         font-display: swap;
-        src: url('/fonts/BellasophieRegular.otf') format('opentype');
+        src: url('public/fonts/BellasophieRegular.otf') format('opentype');
     }
 
     @font-face {

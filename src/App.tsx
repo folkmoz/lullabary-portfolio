@@ -61,7 +61,7 @@ function App() {
         {/*<IntroduceSection />*/}
         {/*<ProfileSection />*/}
         {/*<WorkExperienceSection />*/}
-        {/*<IllustrationSection />*/}
+        <IllustrationSection />
         <CreativeSection />
 
         <PreloaderCounter finishLoading={() => setIsPreloading(false)} />

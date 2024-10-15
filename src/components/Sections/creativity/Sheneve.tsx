@@ -3,6 +3,7 @@ import { getCloudinaryImage } from "~/lib/Cloudinary";
 import useImagePreloader from "~hooks/useImagePreloader";
 import CreativeTitle from "~components/Sections/creativity/components/CreativeTitle";
 import Animation from "~components/AnimatedComponents/Animation";
+import ImagePortal from "~components/ImagePortal";
 
 const pic01 = getCloudinaryImage("creativity/02/01");
 const pic02 = getCloudinaryImage("creativity/02/02");
@@ -15,7 +16,7 @@ function Sheneve() {
 
       <div className="mt-0 md:mt-4">
         <Animation.ImageReveal once withScale end="top 20%">
-          <img
+          <ImagePortal
             src={pic01}
             alt="Emma, Vtuber manager from VIBE ENT"
             className="w-full max-w-full object-cover"
@@ -24,7 +25,7 @@ function Sheneve() {
       </div>
       <div className="mt-4">
         <Animation.ImageReveal once withScale end="top 30%">
-          <img
+          <ImagePortal
             src={pic02}
             alt="Emma, Vtuber manager from VIBE ENT"
             className="w-full max-w-full object-cover"

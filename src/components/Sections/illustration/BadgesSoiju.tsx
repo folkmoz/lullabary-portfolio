@@ -2,6 +2,7 @@ import React from "react";
 import { getCloudinaryImage } from "~/lib/Cloudinary";
 import Animation from "~components/AnimatedComponents/Animation";
 import useImagePreloader from "~hooks/useImagePreloader";
+import ImagePortal from "~components/ImagePortal";
 
 const pic01 = getCloudinaryImage("illustration/04/01");
 const pic02 = getCloudinaryImage("illustration/04/02");
@@ -20,7 +21,7 @@ function BadgesSoiju() {
       </div>
 
       <div>
-        <img
+        <ImagePortal
           src={pic01}
           alt="Badges Soiju membership tier"
           className="max-h-[300px] w-full max-w-full object-cover"
@@ -28,7 +29,7 @@ function BadgesSoiju() {
       </div>
       <div>
         <Animation.ImageReveal once end="bottom center" start="top bottom">
-          <img
+          <ImagePortal
             src={pic02}
             alt="Badges Soiju membership tier"
             className="w-full max-w-full object-contain lg:w-1/2"

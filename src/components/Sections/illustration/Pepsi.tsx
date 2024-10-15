@@ -7,8 +7,11 @@ import { getCloudinaryImage } from "~/lib/Cloudinary";
 const pic01 = getCloudinaryImage("illustration/02/01");
 const pic02 = getCloudinaryImage("illustration/02/02");
 const pic03 = getCloudinaryImage("illustration/02/03");
+const pic04 = getCloudinaryImage("illustration/02/04");
+const pic05 = getCloudinaryImage("illustration/02/05");
+const pic06 = getCloudinaryImage("illustration/02/06");
 
-const images = [pic01, pic02, pic03];
+const images = [pic01, pic02, pic03, pic04, pic05, pic06];
 
 function Pepsi() {
   useImagePreloader(images);

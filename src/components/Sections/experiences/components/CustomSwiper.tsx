@@ -1,9 +1,9 @@
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "~/lib/utils/tailwindcss";
-import { useLenis } from "@studio-freight/react-lenis";
-import Portal from "~components/Portal";
 import { useScreen } from "~hooks/useScreen";
+import ImagePortalModal from "~components/ImagePortalModal";
+import useScroll from "~hooks/useScroll";
 
 function CustomSwiper({
   height = "h-[200px] md:h-[250px]",
@@ -25,7 +25,8 @@ function CustomSwiper({
 
   const { device } = useScreen();
   const id = useId();
-  const lenis = useLenis();
+
+  const { enableScroll, disableScroll } = useScroll();
 
   useEffect(() => {
     if (!isMounted) {
@@ -38,13 +39,9 @@ function CustomSwiper({
     }
 
     if (selectedImage) {
-      lenis?.stop();
-      document.body.style.marginRight = "17px";
-      document.body.style.overflow = "hidden";
+      disableScroll();
     } else {
-      lenis?.start();
-      document.body.style.overflow = "auto";
-      document.body.style.marginRight = "0px";
+      enableScroll();
     }
   }, [selectedImage, isMounted, device]);
   return (
@@ -97,32 +94,18 @@ function CustomSwiper({
 
       <AnimatePresence mode="wait">
         {selectedImage && (
-          <Portal>
-            <motion.div
-              onClick={() => setSelectedImage("")}
-              className="fixed inset-0 z-[999] grid place-items-center"
-            >
-              <motion.div
-                animate={{
-                  backdropFilter: "blur(8px)",
-                  backgroundColor: "rgba(0, 0, 0, 0.1)",
-                  transition: { duration: 0.3, ease: "easeInOut", delay: 0.1 },
-                }}
-                exit={{
-                  backdropFilter: "blur(0px)",
-                  backgroundColor: "rgba(0, 0, 0, 0)",
-                  transition: { duration: 0.3, ease: "easeInOut" },
-                }}
-                className="absolute left-0 top-0 z-[0] h-full w-full"
-              />
-              <motion.img
-                layoutId={id + selectedImage}
-                src={selectedImage}
-                alt=""
-                className="z-[1] object-cover lg:max-h-[500px] xl:max-h-[800px]"
-              />
-            </motion.div>
-          </Portal>
+          <ImagePortalModal
+            onClose={() => {
+              setSelectedImage("");
+            }}
+          >
+            <motion.img
+              layoutId={id + selectedImage}
+              src={selectedImage}
+              alt=""
+              className="z-[1] object-cover lg:max-h-[500px] xl:max-h-[800px]"
+            />
+          </ImagePortalModal>
         )}
       </AnimatePresence>
     </div>
