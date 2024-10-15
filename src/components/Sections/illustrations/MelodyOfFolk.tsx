@@ -8,10 +8,10 @@ import CustomSwiper from "~components/Sections/experiences/components/CustomSwip
 import { getCloudinaryImage, getCloudinaryVideo } from "~/lib/Cloudinary";
 import ImagePortal from "~components/ImagePortal";
 
-const clip = getCloudinaryVideo("illustrations/01/clip");
-const pic01 = getCloudinaryImage("illustrations/01/01");
-const pic02 = getCloudinaryImage("illustrations/01/02");
-const pic03 = getCloudinaryImage("illustrations/01/03");
+const clip = getCloudinaryVideo("illustration/01/clip");
+const pic01 = getCloudinaryImage("illustration/01/01");
+const pic02 = getCloudinaryImage("illustration/01/02");
+const pic03 = getCloudinaryImage("illustration/01/03");
 
 function MelodyOfFolk() {
   useImagePreloader([pic01, pic02, pic03]);

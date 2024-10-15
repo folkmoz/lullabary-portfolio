@@ -16,12 +16,12 @@ function CustomSwiper({
   showLabel?: boolean;
   images: string[];
 }) {
-  const [isMounted, setIsMounted] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string>("");
 
   const timer = useRef<number | null>(null);
   const ref = useRef<HTMLDivElement>(null);
+  const isMounted = useRef(false);
 
   const { device } = useScreen();
   const id = useId();
@@ -29,8 +29,8 @@ function CustomSwiper({
   const { enableScroll, disableScroll } = useScroll();
 
   useEffect(() => {
-    if (!isMounted) {
-      setIsMounted(true);
+    if (!isMounted.current) {
+      isMounted.current = true;
       return;
     }
 
@@ -43,7 +43,7 @@ function CustomSwiper({
     } else {
       enableScroll();
     }
-  }, [selectedImage, isMounted, device]);
+  }, [selectedImage, device]);
   return (
     <div ref={ref} className="w-fit max-w-full overflow-hidden">
       <motion.div

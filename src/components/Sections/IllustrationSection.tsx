@@ -7,7 +7,7 @@ import MVs from "~components/Sections/illustrations/MVs";
 import BadgesSoiju from "~components/Sections/illustrations/BadgesSoiju";
 import Pepsi from "~components/Sections/illustrations/Pepsi";
 
-const headline = getCloudinaryImage("illustrations/headline");
+const headline = getCloudinaryImage("illustration/headline");
 
 function IllustrationSection() {
   useImagePreloader([headline]);

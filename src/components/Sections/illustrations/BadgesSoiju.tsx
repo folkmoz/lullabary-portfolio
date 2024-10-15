@@ -4,8 +4,8 @@ import Animation from "~components/AnimatedComponents/Animation";
 import useImagePreloader from "~hooks/useImagePreloader";
 import ImagePortal from "~components/ImagePortal";
 
-const pic01 = getCloudinaryImage("illustrations/04/01");
-const pic02 = getCloudinaryImage("illustrations/04/02");
+const pic01 = getCloudinaryImage("illustration/04/01");
+const pic02 = getCloudinaryImage("illustration/04/02");
 
 function BadgesSoiju() {
   useImagePreloader([pic01, pic02]);

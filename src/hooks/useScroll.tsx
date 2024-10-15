@@ -1,21 +1,26 @@
 import { useLenis } from "@studio-freight/react-lenis";
+import { useMemo } from "react";
 
 function useScroll() {
   const lenis = useLenis();
 
-  const disableScroll = () => {
-    document.body.style.overflow = "hidden";
-    document.body.style.marginRight = "17px";
+  const disableScroll = useMemo(() => {
+    return () => {
+      document.body.style.overflow = "hidden";
+      document.body.style.marginRight = `17px`;
 
-    lenis?.stop();
-  };
+      lenis?.stop();
+    };
+  }, []);
 
-  const enableScroll = () => {
-    document.body.style.overflow = "auto";
-    document.body.style.marginRight = "0px";
+  const enableScroll = useMemo(() => {
+    return () => {
+      document.body.style.overflow = "";
+      document.body.style.marginRight = "";
 
-    lenis?.start();
-  };
+      lenis?.start();
+    };
+  }, []);
 
   return { disableScroll, enableScroll };
 }
