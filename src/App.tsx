@@ -56,11 +56,11 @@ function App() {
         ref={rootElRef}
         className="relative flex w-full flex-col justify-center overflow-hidden"
       >
-        {/*<HeroSection isPreloading={isPreloading} rootElm={rootElRef} />*/}
+        <HeroSection isPreloading={isPreloading} rootElm={rootElRef} />
 
-        {/*<IntroduceSection />*/}
-        {/*<ProfileSection />*/}
-        {/*<WorkExperienceSection />*/}
+        <IntroduceSection />
+        <ProfileSection />
+        <WorkExperienceSection />
         <IllustrationSection />
         <CreativeSection />
 
