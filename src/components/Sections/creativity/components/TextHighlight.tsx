@@ -11,7 +11,7 @@ function TextHighlight({
   return (
     <span className="font-bold" {...props}>
       {" "}
-      {children}
+      {children}{" "}
     </span>
   );
 }

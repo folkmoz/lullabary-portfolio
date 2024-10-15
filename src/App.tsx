@@ -9,7 +9,6 @@ import { config } from "~/config";
 
 import HeroSection from "~components/Sections/HeroSection";
 import PreloaderCounter from "~components/Preloader";
-import KeyVisual from "~components/Sections/creativity/KeyVisual";
 
 const IntroduceSection = React.lazy(
   () => import("~components/Sections/IntroduceSection"),
@@ -26,6 +25,10 @@ const IllustrationSection = React.lazy(
 
 const CreativeSection = React.lazy(
   () => import("~components/Sections/CreativeSection"),
+);
+
+const GraphicSection = React.lazy(
+  () => import("~components/Sections/GraphicSection"),
 );
 
 gsap.registerPlugin(CustomEase);
@@ -63,6 +66,7 @@ function App() {
         <WorkExperienceSection />
         <IllustrationSection />
         <CreativeSection />
+        <GraphicSection />
 
         <PreloaderCounter finishLoading={() => setIsPreloading(false)} />
       </main>

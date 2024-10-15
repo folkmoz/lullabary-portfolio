@@ -90,7 +90,7 @@ function PreloaderCounter({ finishLoading }: { finishLoading: () => void }) {
             delay: 0.5,
             right: "-20%",
             opacity: 0,
-            skewY: 20,
+            skewY: -20,
             duration: 1,
             ease: "power4.inOut",
             onStart: finishLoading,

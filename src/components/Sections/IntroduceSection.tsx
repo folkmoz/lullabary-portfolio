@@ -1,12 +1,12 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import ColTextReveal from "~components/ColTextReveal";
 import { gsap } from "gsap";
-// import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import { Parallax } from "~components/AnimatedComponents/Parallax";
 import Bubble from "~components/Bubble";
 import { useGSAP } from "@gsap/react";
-import { useLenis } from "@studio-freight/react-lenis";
 import { getCloudinaryImage } from "~/lib/Cloudinary";
+import BadgeImage from "~components/BadgeImage";
+import { useLenis } from "@studio-freight/react-lenis";
 
 const fish1 = getCloudinaryImage("fish01");
 const blueStar = getCloudinaryImage("blueStar");
@@ -21,17 +21,32 @@ const badgeList = [
   {
     src: productionDesignBadge,
     alt: "production design icon",
-    target: "#production",
+    target: "#production-design",
+    offset: 300,
   },
-  { src: illustrationBadge, alt: "ilustration icon", target: "#illustration" },
-  { src: creativeBadge, alt: "creative icon", target: "#creative" },
+  { src: illustrationBadge, alt: "ilustration icon", target: "#illustrations" },
+  { src: creativeBadge, alt: "creativity icon", target: "#creativity" },
   { src: graphicBadge, alt: "graphic icon", target: "#graphic" },
 ];
 
 function IntroduceSection() {
   const containerRef = useRef<HTMLDivElement>(null);
-
   const fish1Ref = useRef<HTMLImageElement>(null);
+
+  const lenis = useLenis();
+
+  const handleBadgeClick = ({
+    target,
+    offset = 0,
+  }: {
+    target: string;
+    offset?: number;
+  }) => {
+    lenis?.scrollTo(target, {
+      duration: 1.5,
+      offset,
+    });
+  };
 
   useGSAP(
     () => {
@@ -80,9 +95,10 @@ function IntroduceSection() {
   return (
     <section
       ref={containerRef}
-      className="relative flex min-h-lvh w-full flex-col justify-start gap-4 pt-20 lg:pb-[40vh] xl:pt-60"
+      id={"introduce"}
+      className="relative flex w-full flex-col justify-start gap-4 pt-20 lg:pb-[40vh] xl:pt-60"
     >
-      <div className="relative mx-auto flex min-h-svh w-full max-w-screen-lg flex-col items-start gap-4 px-4 md:px-16 lg:px-4">
+      <div className="relative mx-auto flex w-full max-w-screen-lg flex-col items-start gap-4 px-4 md:px-16 lg:px-4">
         <div className="text-md w-full md:text-xl xl:text-3xl">
           <ColTextReveal
             threshold={1}
@@ -113,7 +129,7 @@ function IntroduceSection() {
           </div>
           <div className="flex-1">
             <Parallax speed={-1}>
-              <div className="relative flex h-full flex-col rounded-3xl bg-secondary px-6 py-8">
+              <div className="pointer-events-auto relative flex h-full flex-col rounded-3xl bg-secondary px-6 py-8">
                 <div className="mx-auto max-w-[80%] rounded-3xl bg-gradient-to-r from-[#DCE0B8] to-transparent p-4 font-andalos text-xl text-red-900 lg:text-2xl">
                   <p>Go check out what I've got!</p>
                 </div>
@@ -136,7 +152,18 @@ function IntroduceSection() {
 
                 <div className="mt-4 grid grid-cols-3">
                   {badgeList.map((badge, index) => (
-                    <BadgeImage key={index} {...badge} />
+                    <BadgeImage
+                      key={index}
+                      {...badge}
+                      isPopup
+                      isScale
+                      onClick={() =>
+                        handleBadgeClick({
+                          target: badge.target,
+                          offset: badge.offset,
+                        })
+                      }
+                    />
                   ))}
                 </div>
               </div>
@@ -208,105 +235,5 @@ function IntroduceSection() {
     </section>
   );
 }
-
-const animations = [
-  "animate-bounce",
-  "animate-spin",
-  "animate-scaleUp",
-  "animate-rotateFrontBack",
-  "animate-pulse",
-  "animate-shake",
-  "animate-heartbeat",
-  "animate-flip",
-];
-const getRandomAnimation = () => {
-  const randomIndex = Math.floor(Math.random() * animations.length);
-  return animations[randomIndex];
-};
-
-const BadgeImage: React.FC<{ src: string; alt: string; target: string }> = ({
-  src,
-  alt,
-  target,
-}) => {
-  const divRef = useRef<HTMLDivElement>(null);
-  const imgRef = useRef<HTMLImageElement>(null);
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
-
-  const lenis = useLenis();
-
-  const handleMouseOver = () => {
-    const animationClass = getRandomAnimation();
-    if (imgRef.current) {
-      imgRef.current.classList.remove(...animations);
-
-      imgRef.current.classList.add(animationClass);
-
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
-
-      timeoutRef.current = setTimeout(
-        () => {
-          if (imgRef.current) {
-            imgRef.current.classList.remove(animationClass);
-          }
-        },
-        Math.random() * 1000 + 2000,
-      );
-    }
-  };
-
-  const handleMouseOut = () => {
-    if (imgRef.current) {
-      imgRef.current.classList.remove(...animations);
-    }
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
-  };
-
-  const handleMouseClick = () => {
-    lenis?.scrollTo(target, {
-      duration: 2,
-    });
-  };
-
-  useEffect(() => {
-    if (divRef.current) {
-      gsap.fromTo(
-        divRef.current,
-        { scale: 0 },
-        {
-          scale: 1,
-          duration: 1,
-          ease: "back.out(1.7)",
-          scrollTrigger: {
-            trigger: imgRef.current,
-            start: "top bottom",
-            once: true,
-          },
-        },
-      );
-    }
-  }, []);
-
-  return (
-    <div
-      ref={divRef}
-      className="inline-block cursor-pointer overflow-hidden"
-      onMouseOver={handleMouseOver}
-      onMouseOut={handleMouseOut}
-      onClick={handleMouseClick}
-    >
-      <img
-        ref={imgRef}
-        src={src}
-        alt={alt}
-        className="scale-[1.3] rounded-full transition-transform duration-300 hover:scale-[1.3]"
-      />
-    </div>
-  );
-};
 
 export default IntroduceSection;

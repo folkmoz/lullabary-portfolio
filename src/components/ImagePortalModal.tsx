@@ -11,7 +11,7 @@ function ImagePortalModal({ children, onClose }: ImagePortalModalProps) {
     <Portal>
       <motion.div
         onClick={onClose}
-        className="fixed inset-0 z-[999] grid place-items-center"
+        className="fixed inset-0 z-[999] grid place-items-center lg:p-14"
       >
         <motion.div
           animate={{

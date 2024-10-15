@@ -11,7 +11,7 @@ function CreativeSection() {
   useImagePreloader([headline]);
   return (
     <section
-      id="creativity"
+      id="creative"
       className="relative flex min-h-lvh w-full flex-col overflow-hidden bg-gradient-to-t from-[#51a1b7] to-[#f0f4c8] py-20"
     >
       <div className="relative mx-auto flex w-full max-w-[1200px] flex-col gap-4 p-4 md:px-8 xl:px-4">

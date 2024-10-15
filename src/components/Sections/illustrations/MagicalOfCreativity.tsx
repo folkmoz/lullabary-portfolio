@@ -4,19 +4,19 @@ import useImagePreloader from "~hooks/useImagePreloader";
 import Animation from "~components/AnimatedComponents/Animation";
 import { getCloudinaryImage } from "~/lib/Cloudinary";
 
-const pic01 = getCloudinaryImage("illustration/06/01");
-const pic02 = getCloudinaryImage("illustration/06/02");
-const pic03 = getCloudinaryImage("illustration/06/03");
-const pic04 = getCloudinaryImage("illustration/06/04");
-const pic05 = getCloudinaryImage("illustration/06/05");
-const pic06 = getCloudinaryImage("illustration/06/06");
-const pic07 = getCloudinaryImage("illustration/06/07");
-const pic08 = getCloudinaryImage("illustration/06/08");
-const pic09 = getCloudinaryImage("illustration/06/09");
-const pic10 = getCloudinaryImage("illustration/06/10");
-const pic11 = getCloudinaryImage("illustration/06/11");
-const pic12 = getCloudinaryImage("illustration/06/12");
-const pic13 = getCloudinaryImage("illustration/06/13");
+const pic01 = getCloudinaryImage("illustrations/06/01");
+const pic02 = getCloudinaryImage("illustrations/06/02");
+const pic03 = getCloudinaryImage("illustrations/06/03");
+const pic04 = getCloudinaryImage("illustrations/06/04");
+const pic05 = getCloudinaryImage("illustrations/06/05");
+const pic06 = getCloudinaryImage("illustrations/06/06");
+const pic07 = getCloudinaryImage("illustrations/06/07");
+const pic08 = getCloudinaryImage("illustrations/06/08");
+const pic09 = getCloudinaryImage("illustrations/06/09");
+const pic10 = getCloudinaryImage("illustrations/06/10");
+const pic11 = getCloudinaryImage("illustrations/06/11");
+const pic12 = getCloudinaryImage("illustrations/06/12");
+const pic13 = getCloudinaryImage("illustrations/06/13");
 
 const images = [
   pic01,

@@ -17,7 +17,10 @@ function WorkExperienceSection() {
   useImagePreloader([backgroundSec1, headline]);
 
   return (
-    <section className="relative flex w-full justify-center gap-4 bg-secondary lg:pt-[80lvh]">
+    <section
+      id={"production-design"}
+      className="relative flex w-full justify-center gap-4 bg-secondary lg:pt-[80lvh]"
+    >
       <div
         style={{
           backgroundImage: `url(${backgroundSec1})`,

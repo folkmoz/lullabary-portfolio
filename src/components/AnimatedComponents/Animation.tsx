@@ -86,7 +86,7 @@ Animation.TextReveal = function Animation({
 
       const splitText = new SplitText(ref.current);
 
-      if (config.isPreview) return;
+      // if (config.isPreview) return;
 
       gsap.from(splitText.lines, {
         duration: 1,

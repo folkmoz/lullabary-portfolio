@@ -1,13 +1,13 @@
 import React from "react";
 import VideoPlayer from "~components/Sections/experiences/components/Videoplayer";
-import FullVersionLink from "~components/Sections/illustration/components/FullVersionLink";
+import FullVersionLink from "~components/Sections/illustrations/components/FullVersionLink";
 import Animation from "~components/AnimatedComponents/Animation";
 import { getCloudinaryVideo } from "~/lib/Cloudinary";
 
-const clip1 = getCloudinaryVideo("illustration/03/01");
-const clip2 = getCloudinaryVideo("illustration/03/02");
-const clip3 = getCloudinaryVideo("illustration/03/03");
-const clip4 = getCloudinaryVideo("illustration/03/04");
+const clip1 = getCloudinaryVideo("illustrations/03/01");
+const clip2 = getCloudinaryVideo("illustrations/03/02");
+const clip3 = getCloudinaryVideo("illustrations/03/03");
+const clip4 = getCloudinaryVideo("illustrations/03/04");
 
 const clips = [
   {

@@ -47,6 +47,7 @@ function CustomSwiper({
   return (
     <div ref={ref} className="w-fit max-w-full overflow-hidden">
       <motion.div
+        data-cursor="drag"
         onDragStart={() => setIsDragging(true)}
         onDragEnd={() => {
           if (timer.current) {
@@ -71,7 +72,7 @@ function CustomSwiper({
               setSelectedImage(image);
             }}
             key={index}
-            className={cn("h-full w-auto", width)}
+            className={cn("h-full w-auto bg-white", width)}
           >
             <motion.img
               layoutId={id + image}

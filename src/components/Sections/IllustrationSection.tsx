@@ -1,13 +1,13 @@
 import React from "react";
 import { getCloudinaryImage } from "~/lib/Cloudinary";
 import useImagePreloader from "~hooks/useImagePreloader";
-import MelodyOfFolk from "~components/Sections/illustration/MelodyOfFolk";
-import MagicalOfCreativity from "~components/Sections/illustration/MagicalOfCreativity";
-import MVs from "~components/Sections/illustration/MVs";
-import BadgesSoiju from "~components/Sections/illustration/BadgesSoiju";
-import Pepsi from "~components/Sections/illustration/Pepsi";
+import MelodyOfFolk from "~components/Sections/illustrations/MelodyOfFolk";
+import MagicalOfCreativity from "~components/Sections/illustrations/MagicalOfCreativity";
+import MVs from "~components/Sections/illustrations/MVs";
+import BadgesSoiju from "~components/Sections/illustrations/BadgesSoiju";
+import Pepsi from "~components/Sections/illustrations/Pepsi";
 
-const headline = getCloudinaryImage("illustration/headline");
+const headline = getCloudinaryImage("illustrations/headline");
 
 function IllustrationSection() {
   useImagePreloader([headline]);
