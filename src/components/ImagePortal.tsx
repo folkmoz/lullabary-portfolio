@@ -1,4 +1,4 @@
-import React, { useEffect, useId, useState } from "react";
+import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import ImagePortalModal from "~components/ImagePortalModal";
 import useScroll from "~hooks/useScroll";
@@ -10,11 +10,17 @@ type ImagePortalProps = React.HTMLAttributes<HTMLImageElement> & {
 
 function ImagePortal(props: ImagePortalProps) {
   const [isOpened, setIsOpened] = useState(false);
+  const isMounted = useRef(false);
 
   const id = useId();
   const { disableScroll, enableScroll } = useScroll();
 
   useEffect(() => {
+    if (!isMounted.current) {
+      isMounted.current = true;
+      return;
+    }
+
     if (isOpened) {
       disableScroll();
     } else {
