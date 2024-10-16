@@ -25,7 +25,7 @@ const badgeList = [
     offset: 300,
   },
   { src: illustrationBadge, alt: "ilustration icon", target: "#illustration" },
-  { src: creativeBadge, alt: "creativity icon", target: "#creativity" },
+  { src: creativeBadge, alt: "creativity icon", target: "#creative" },
   { src: graphicBadge, alt: "graphic icon", target: "#graphic" },
 ];
 
