@@ -55,7 +55,7 @@ function IntroduceSection() {
         {
           x: 150,
           rotate: 0,
-          y: 300,
+          y: 270,
         },
         {
           rotate: 40,
@@ -96,7 +96,7 @@ function IntroduceSection() {
     <section
       ref={containerRef}
       id={"introduce"}
-      className="relative flex w-full flex-col justify-start gap-4 pb-[20vh] pt-20 lg:pb-[40vh] xl:pt-60"
+      className="relative flex w-full flex-col justify-start gap-4 pb-[20vh] pt-[10lvh] md:pt-4 lg:pb-[40vh] xl:pt-60"
     >
       <div className="relative mx-auto flex w-full max-w-screen-lg flex-col items-start gap-4 px-4 md:px-16 lg:px-4">
         <div className="text-md w-full md:text-xl xl:text-3xl">
