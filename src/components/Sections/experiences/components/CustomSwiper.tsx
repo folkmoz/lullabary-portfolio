@@ -10,11 +10,13 @@ function CustomSwiper({
   width = "max-w-[300px] md:max-w-[350px]",
   showLabel = true,
   images,
+  children,
 }: {
   height?: string;
   width?: string;
   showLabel?: boolean;
   images: string[];
+  children?: React.ReactNode;
 }) {
   const [isDragging, setIsDragging] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string>("");
@@ -65,6 +67,7 @@ function CustomSwiper({
         dragConstraints={ref}
         className={cn("flex w-max gap-2", height)}
       >
+        {children}
         {images.map((image, index) => (
           <motion.div
             onClick={() => {

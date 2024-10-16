@@ -16,7 +16,7 @@ function VideoPlayer({ source }: { source: string }) {
 
   return (
     <div className="group relative w-fit">
-      <video className="w-full" ref={videoRef} autoPlay={false}>
+      <video className="h-full w-full" ref={videoRef} autoPlay={false}>
         <source src={source} type="video/mp4" />
         Your browser does not support the video tag. Please try viewing on a
         different browser.
