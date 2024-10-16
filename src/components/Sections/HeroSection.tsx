@@ -38,13 +38,14 @@ function HeroSection({
     if (isPreloading && device) {
       lenis?.stop();
 
-      const isMobile = width < 768;
+      const isMobile = width < 480;
+      const isTablet = width < 1024;
 
       const size = isMobile ? 150 : 300;
 
       const aside = Math.ceil(width / 2 - size);
       const top = Math.ceil(height / 2 - size);
-      const bottom = Math.ceil(height - size);
+      const bottom = Math.ceil(height / (isTablet ? 2 : 1) - size);
 
       heroSectionRef!.current!.style.clipPath = isMobile
         ? `inset(${top}px ${aside}px ${top}px ${aside}px)`
@@ -112,10 +113,10 @@ function HeroSection({
 
     if (isPreloading || !device) return;
 
-    const isMobile = device === "mobile";
+    const isDesktop = device === "desktop";
 
     gsap.to(heroSectionRef.current, {
-      clipPath: isMobile ? "inset(0px 0px)" : "inset(0px 0px 0px)",
+      clipPath: isDesktop ? "inset(0px 0px 0px)" : "inset(0px 0px)",
       duration: 1,
       ease: "expo.inOut",
       onComplete: () => {
@@ -180,7 +181,7 @@ function HeroSection({
       style={{
         clipPath: config.isPreview ? "unset" : "inset(50% 0px 50% 0px)",
       }}
-      className="pointer-events-none relative flex min-h-lvh w-full flex-col justify-center lg:min-h-[150svh]"
+      className="pointer-events-none relative flex min-h-dvh w-full flex-col justify-center lg:min-h-[150dvh]"
     >
       <div className="mx-auto max-w-screen-md space-y-4 lg:-mt-[50vh] lg:space-y-0">
         <div>
