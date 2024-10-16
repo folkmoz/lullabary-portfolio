@@ -49,7 +49,9 @@ function App() {
 
   useEffect(() => {
     if (config.isPreview) return;
-
+    ScrollTrigger.getAll().forEach((trigger) => {
+      trigger.kill(true);
+    });
     ScrollTrigger.clearScrollMemory("manual");
   }, []);
 

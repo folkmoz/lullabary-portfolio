@@ -2,6 +2,7 @@ import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import ImagePortalModal from "~components/ImagePortalModal";
 import useScroll from "~hooks/useScroll";
+import { isChrome } from "react-device-detect";
 
 type ImagePortalProps = React.HTMLAttributes<HTMLImageElement> & {
   src: string;
@@ -14,6 +15,11 @@ function ImagePortal(props: ImagePortalProps) {
 
   const id = useId();
   const { disableScroll, enableScroll } = useScroll();
+
+  const onImageClick = () => {
+    if (isChrome) return;
+    setIsOpened(true);
+  };
 
   useEffect(() => {
     if (!isMounted.current) {
@@ -33,7 +39,7 @@ function ImagePortal(props: ImagePortalProps) {
       <motion.img
         layoutId={id}
         src={props.src}
-        onClick={() => setIsOpened(true)}
+        onClick={onImageClick}
         alt={props.alt}
         className={props.className}
       />

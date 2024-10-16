@@ -32,16 +32,16 @@ function Director() {
         the event clips.
       </KvParagraph>
       <div className="mt-4">
-        <div className="grid grid-cols-2 grid-rows-2 gap-2">
+        <div className="grid max-h-[600px] grid-cols-2 grid-rows-2 gap-2">
           <div className="col-span-1 row-span-2">
             <ImagePortal src={pic01} alt="" className="h-full" />
           </div>
           <div className="col-span-1">
-            <ImagePortal src={pic02} alt="" />
+            <ImagePortal src={pic02} alt="" className="h-full" />
           </div>
 
           <div className="col-span-1">
-            <ImagePortal src={pic03} alt="" />
+            <ImagePortal src={pic03} alt="" className="h-full" />
           </div>
         </div>
       </div>
