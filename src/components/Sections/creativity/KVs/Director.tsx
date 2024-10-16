@@ -36,7 +36,6 @@ function Director() {
           <div className="col-span-1 row-span-2">
             <ImagePortal src={pic01} alt="" className="h-full" />
           </div>
-
           <div className="col-span-1">
             <ImagePortal src={pic02} alt="" />
           </div>

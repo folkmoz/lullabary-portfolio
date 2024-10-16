@@ -9,6 +9,8 @@ import Director from "~components/Sections/creativity/KVs/Director";
 import ChibiZaab from "~components/Sections/creativity/KVs/ChibiZaab";
 import UmayPlus from "~components/Sections/creativity/StoryBoard/UmayPlus";
 import DentaMateStoryBoard from "~components/Sections/creativity/StoryBoard/DentaMateStoryBoard";
+import GhostSeminar from "~components/Sections/creativity/pr/GhostSeminar";
+import ExtremelyYes from "~components/Sections/creativity/pr/ExtremelyYes";
 
 const redStar = getCloudinaryImage("redStar02");
 const fish = getCloudinaryImage("fish03");
@@ -52,6 +54,9 @@ function KeyVisual() {
 
         <UmayPlus />
         <DentaMateStoryBoard />
+
+        <GhostSeminar />
+        <ExtremelyYes />
       </div>
     </div>
   );

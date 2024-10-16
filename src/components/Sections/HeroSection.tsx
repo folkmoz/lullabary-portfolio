@@ -113,7 +113,7 @@ function HeroSection({
 
     if (isPreloading || !device) return;
 
-    const isDesktop = device === "desktop";
+    const isDesktop = width > 1024;
 
     gsap.to(heroSectionRef.current, {
       clipPath: isDesktop ? "inset(0px 0px 0px)" : "inset(0px 0px)",

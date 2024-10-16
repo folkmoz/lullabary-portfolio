@@ -31,7 +31,7 @@ function DentaMate() {
       <div className="mt-4">
         <CustomSwiper
           height="h-[300px] md:h-[500px] lg:h-[500px]"
-          width="max-w-[1000px] lg:max-w-full"
+          width="md:max-w-[1000px] lg:max-w-full"
           images={images}
         />
       </div>
