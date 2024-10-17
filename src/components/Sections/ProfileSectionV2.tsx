@@ -114,8 +114,8 @@ function ProfileSectionV2() {
       >
         <div className="h-full w-full bg-black py-16">
           <div className="relative flex h-full w-full flex-col gap-4 bg-secondary py-10 lg:flex-row">
-            <div className="flex h-full w-full flex-col pt-20 font-bella lg:w-2/5 lg:pt-4">
-              <div className="h-max w-full text-center text-2xl uppercase leading-[5vw] text-red-custom md:text-[5vw]">
+            <div className="flex h-full w-full flex-col space-y-4 pt-10 font-bella lg:w-2/5 lg:space-y-0 lg:pt-4">
+              <div className="h-max w-full text-center text-6xl uppercase leading-[5vw] text-red-custom md:text-[5vw]">
                 Profile
               </div>
               <div className="lg:h-[min(100%,_600px)]">
@@ -126,14 +126,14 @@ function ProfileSectionV2() {
                 />
               </div>
               <div className="flexjustify-center">
-                <div className="relative text-center text-[5vw] leading-[5vw]">
+                <div className="relative text-center text-3xl lg:text-[5vw] lg:leading-[5vw]">
                   <div className="uppercase">Creative</div>
                   <div className="uppercase">ART DIRECTOR</div>
                 </div>
               </div>
             </div>
 
-            <div className="flex h-full w-full flex-col gap-8 px-4 md:px-8 lg:w-3/5">
+            <div className="mt-8 flex h-full w-full flex-col gap-8 px-4 md:px-8 lg:mt-0 lg:w-3/5">
               <div className="rounded-3xl bg-white/60 px-6 py-4 lg:rounded-full lg:px-8">
                 <KvParagraph>
                   <TextHighlight>
