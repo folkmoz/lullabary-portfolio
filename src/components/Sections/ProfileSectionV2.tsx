@@ -187,7 +187,7 @@ function ProfileSectionV2() {
 
               <div className="relative mt-4 rounded-[2rem] bg-white/60 px-4 pb-6 pt-10 lg:mt-2">
                 <div className="absolute -top-[20px] left-0 w-full lg:-left-4">
-                  <div className="bg-pink-custom w-max rounded-full p-2">
+                  <div className="w-max rounded-full bg-pink-custom p-2">
                     <h3 className="text-3xl lg:text-4xl">
                       <span className="font-monotes uppercase">Hard Skill</span>
                     </h3>
@@ -212,11 +212,9 @@ function ProfileSectionV2() {
 
               <div className="relative mt-4 rounded-[2rem] bg-white/60 px-4 pb-6 pt-10 lg:mt-2">
                 <div className="absolute -top-[20px] left-0 w-full lg:-left-4">
-                  <div className="bg-pink-custom w-max rounded-full p-2">
+                  <div className="w-max rounded-full bg-pink-custom p-2">
                     <h3 className="text-3xl lg:text-4xl">
-                      <span className="font-monotes uppercase opacity-0">
-                        Hard Skill
-                      </span>
+                      <span className="font-monotes uppercase">Soft Skill</span>
                     </h3>
                   </div>
                 </div>
