@@ -58,7 +58,7 @@ function HeroSection({
       mobile: {
         rotate: -30,
         x: 0,
-        y: 250,
+        y: 150,
       },
 
       tablet: {

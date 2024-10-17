@@ -27,6 +27,11 @@ function Emma() {
               className="w-full max-w-full object-cover"
             />
           </Animation.ImageReveal>
+          <div>
+            <p className="mt-2 text-center text-sm text-gray-500">
+              (Click on the image to see more)
+            </p>
+          </div>
         </a>
       </div>
     </div>

@@ -4,7 +4,6 @@ import { cn } from "~/lib/utils/tailwindcss";
 import { useScreen } from "~hooks/useScreen";
 import ImagePortalModal from "~components/ImagePortalModal";
 import useScroll from "~hooks/useScroll";
-import { isChrome } from "react-device-detect";
 
 function CustomSwiper({
   height = "h-[200px] md:h-[250px]",
@@ -72,7 +71,6 @@ function CustomSwiper({
         {images.map((image, index) => (
           <motion.div
             onClick={() => {
-              if (isDragging || isChrome) return;
               setSelectedImage(image);
             }}
             key={index}

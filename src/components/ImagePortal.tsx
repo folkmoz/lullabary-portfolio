@@ -2,7 +2,6 @@ import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import ImagePortalModal from "~components/ImagePortalModal";
 import useScroll from "~hooks/useScroll";
-import { isChrome } from "react-device-detect";
 
 type ImagePortalProps = React.HTMLAttributes<HTMLImageElement> & {
   src: string;
@@ -17,7 +16,6 @@ function ImagePortal(props: ImagePortalProps) {
   const { disableScroll, enableScroll } = useScroll();
 
   const onImageClick = () => {
-    if (isChrome) return;
     setIsOpened(true);
   };
 
