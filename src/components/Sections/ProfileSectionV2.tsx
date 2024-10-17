@@ -105,12 +105,12 @@ function ProfileSectionV2() {
   return (
     <section
       id="profile"
-      className="relative -mb-1 flex w-full flex-col justify-center gap-4 overflow-hidden bg-secondary pt-40 xl:pt-52"
+      className="relative -mb-1 flex w-full flex-col justify-center gap-4 overflow-hidden bg-secondary pb-[20vh] pt-40 xl:pt-52"
     >
       <div
         ref={profileContainer}
         id="prfile-pinned"
-        className="relative h-full w-full bg-secondary pb-[20vh] lg:h-screen"
+        className="relative h-full w-full bg-secondary lg:h-screen"
       >
         <div className="h-full w-full bg-black py-16">
           <div className="relative flex h-full w-full flex-col gap-4 bg-secondary py-10 lg:flex-row">
