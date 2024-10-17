@@ -10,9 +10,9 @@ import Lenis from "~/Lenis";
 
 createRoot(document.getElementById("root")!).render(
   <Fragment>
-    {/*<Lenis>*/}
-    <App />
-    {/*</Lenis>*/}
+    <Lenis>
+      <App />
+    </Lenis>
     <TailwindcssIndicator />
   </Fragment>,
 );

@@ -7,6 +7,7 @@ export default {
         primary: "#3E7496",
         secondary: "#ECEDD0",
         "red-custom": "#A41D1E",
+        "pink-custom": "#C6767F",
       },
       fontFamily: {
         wagon: ["Wagon", "sans-serif"],

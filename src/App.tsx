@@ -9,6 +9,7 @@ import { config } from "~/config";
 
 import HeroSection from "~components/Sections/HeroSection";
 import PreloaderCounter from "~components/Preloader";
+import ProfileSectionV2 from "~components/Sections/ProfileSectionV2";
 
 const IntroduceSection = React.lazy(
   () => import("~components/Sections/IntroduceSection"),
@@ -64,7 +65,9 @@ function App() {
         <HeroSection isPreloading={isPreloading} rootElm={rootElRef} />
 
         <IntroduceSection />
-        <ProfileSection />
+        <ProfileSectionV2 />
+
+        {/*<ProfileSection />*/}
         <WorkExperienceSection />
         <IllustrationSection />
         <CreativeSection />
