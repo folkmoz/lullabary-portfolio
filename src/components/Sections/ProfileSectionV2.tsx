@@ -112,10 +112,10 @@ function ProfileSectionV2() {
         id="prfile-pinned"
         className="relative h-full w-full bg-secondary lg:h-screen"
       >
-        <div className="h-full w-full bg-black py-16 lg:h-screen">
-          <div className="relative flex h-full w-full flex-col gap-4 bg-secondary py-10 lg:flex-row xl:py-0 2xl:py-8">
-            <div className="flex h-full w-full flex-col space-y-4 pt-10 font-bella lg:w-2/5 lg:space-y-0 lg:pt-4">
-              <div className="h-max w-full text-center text-6xl uppercase text-red-custom md:text-[9vw] md:leading-[9vw] lg:text-[5vw] lg:leading-[5vw] xl:text-5xl 2xl:lg:text-[5vw] 2xl:leading-[5vw]">
+        <div className="h-full w-full items-center bg-black py-16 lg:h-screen xl:py-12">
+          <div className="relative flex h-full w-full flex-col gap-4 bg-secondary py-10 lg:flex-row xl:py-0">
+            <div className="flex h-full w-full flex-col justify-center space-y-4 pt-10 font-bella lg:w-2/5 lg:space-y-0 lg:pt-4">
+              <div className="h-max w-full text-center text-6xl uppercase text-red-custom md:text-[9vw] md:leading-[9vw] lg:text-[5vw] lg:leading-[5vw] xl:text-5xl 2xl:lg:text-[4vw] 2xl:leading-[4vw]">
                 Profile
               </div>
               <div className="lg:h-[min(100%,_600px)]">
@@ -126,15 +126,15 @@ function ProfileSectionV2() {
                 />
               </div>
               <div className="flexjustify-center">
-                <div className="relative text-center text-3xl md:text-[9vw] md:leading-[9vw] lg:text-[5vw] lg:leading-[5vw] xl:text-5xl 2xl:lg:text-[5vw] 2xl:leading-[5vw]">
+                <div className="relative text-center text-3xl md:text-[9vw] md:leading-[9vw] lg:text-[5vw] lg:leading-[5vw] xl:text-5xl 2xl:lg:text-[4vw] 2xl:leading-[4vw]">
                   <div className="uppercase">Creative</div>
                   <div className="uppercase">ART DIRECTOR</div>
                 </div>
               </div>
             </div>
 
-            <div className="mt-8 flex h-full w-full flex-col gap-8 px-4 md:px-8 lg:mt-0 lg:w-3/5 xl:gap-4">
-              <div className="rounded-3xl bg-white/60 px-6 py-4 lg:order-3 lg:rounded-[50px] lg:px-8 2xl:py-12">
+            <div className="mt-8 flex h-full w-full flex-col gap-8 px-4 md:px-8 lg:mt-0 lg:w-3/5 lg:justify-center xl:gap-4">
+              <div className="rounded-3xl bg-white/60 px-6 py-4 lg:order-3 lg:rounded-[50px] lg:px-8 2xl:py-6">
                 <KvParagraph>
                   <TextHighlight>
                     I have gained valuable experiences over the years
