@@ -37,9 +37,9 @@ function ArtditStudio() {
           <div className="lg:pt-10 xl:pt-12">
             <Animation.TextReveal>
               ar(t)dit studio is an art studio that creates various types of
-              artwork,such as visualizers, motion graphics, illustrations, and
+              artwork, such as visualizers, motion graphics, illustrations, and
               art direction for different media. I co-founded this studio with
-              my friends,I handle the illustrations and graphic design.
+              my friends, I handle the illustrations and graphic design.
               Additionally, our studio offers custom-designed and hand-drawn
               screen-printed T-shirts.
             </Animation.TextReveal>

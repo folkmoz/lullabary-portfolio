@@ -20,18 +20,20 @@ function GhostSeminar() {
         <>
           [PR]{" "}
           <span className="font-thai font-normal">
-            สัมมนาเรื่องผี ๆ เล่าดีไม่มีเอาท์
+            สัมมนา เรื่องผี ๆ เล่าดีไม่มีเอาท์
           </span>
         </>
       </KvTitle>
       <KvParagraph>
-        I worked on a project for a cute women's jewelry shop as part of the
-        BRS302 course. The shop primarily promotes and sells through social
-        media channels. I served as part of the
+        For a seminar inviting P' Pong and P' Odd as speakers to discuss how to
+        create popular ghost-themed radio shows that remain relevant today, I
+        served as the PR,
         <TextHighlight>
-          creative content team, developing the communication plan
+          creating content for the page and promoting the seminar.
         </TextHighlight>
-        and handling video editing and some graphic design.
+        I also <TextHighlight>created artwork for giveaways</TextHighlight> at
+        the event, including stickers, postcards, and souvenirs for the
+        speakers.
       </KvParagraph>
       <div className="mt-4">
         <CustomSwiper
