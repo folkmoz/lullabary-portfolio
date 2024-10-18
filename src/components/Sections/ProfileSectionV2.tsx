@@ -113,7 +113,7 @@ function ProfileSectionV2() {
         className="relative h-full w-full bg-secondary lg:h-screen"
       >
         <div className="h-full w-full items-center bg-black py-16 lg:h-screen xl:py-12">
-          <div className="relative flex h-full w-full flex-col gap-4 bg-secondary py-10 lg:flex-row xl:py-0">
+          <div className="relative flex h-full w-full flex-col gap-4 bg-secondary py-10 lg:flex-row xl:py-2">
             <div className="flex h-full w-full flex-col justify-center space-y-4 pt-10 font-bella lg:w-2/5 lg:space-y-0 lg:pt-4">
               <div className="h-max w-full text-center text-6xl uppercase text-red-custom md:text-[9vw] md:leading-[9vw] lg:text-[5vw] lg:leading-[5vw] xl:text-5xl 2xl:lg:text-[4vw] 2xl:leading-[4vw]">
                 Profile
