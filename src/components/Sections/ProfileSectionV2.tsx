@@ -112,7 +112,7 @@ function ProfileSectionV2() {
         id="prfile-pinned"
         className="relative h-full w-full bg-secondary lg:h-screen"
       >
-        <div className="h-full w-full bg-black py-16">
+        <div className="h-full w-full bg-black py-16 lg:h-screen">
           <div className="relative flex h-full w-full flex-col gap-4 bg-secondary py-10 lg:flex-row xl:py-0 2xl:py-8">
             <div className="flex h-full w-full flex-col space-y-4 pt-10 font-bella lg:w-2/5 lg:space-y-0 lg:pt-4">
               <div className="h-max w-full text-center text-6xl uppercase text-red-custom md:text-[9vw] md:leading-[9vw] lg:text-[5vw] lg:leading-[5vw] xl:text-5xl 2xl:lg:text-[5vw] 2xl:leading-[5vw]">
@@ -219,8 +219,8 @@ function ProfileSectionV2() {
                   </div>
                 </div>
 
-                <div className="mt-2 lg:-mt-2 lg:ml-40">
-                  <p className="text-center text-xl md:text-2xl lg:text-3xl">
+                <div className="mt-2 lg:-mt-2 lg:ml-56">
+                  <p className="text-center text-xl md:text-2xl lg:text-left lg:text-3xl">
                     Creativity, collaboration, adaptability,
                     <br /> critical thinking, communication
                   </p>
