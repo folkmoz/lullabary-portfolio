@@ -112,7 +112,7 @@ function ProfileSectionV2() {
         id="prfile-pinned"
         className="relative h-full w-full bg-secondary lg:h-screen"
       >
-        <div className="h-full w-full items-center bg-black py-16 lg:h-screen lg:py-12">
+        <div className="h-full w-full items-center bg-black py-16 lg:h-screen lg:py-8 xl:py-12">
           <div className="relative flex h-full w-full flex-col gap-4 bg-secondary py-10 lg:flex-row lg:py-2">
             <div className="flex h-full w-full flex-col justify-center space-y-4 pt-10 font-bella lg:w-2/5 lg:space-y-0 lg:pt-4">
               <div className="h-max w-full text-center text-6xl uppercase text-red-custom md:text-[9vw] md:leading-[9vw] lg:text-[5vw] lg:leading-[5vw] xl:text-5xl 2xl:lg:text-[4vw] 2xl:leading-[4vw]">
@@ -133,7 +133,7 @@ function ProfileSectionV2() {
               </div>
             </div>
 
-            <div className="mt-8 flex h-full w-full flex-col gap-8 px-4 md:px-8 lg:mt-0 lg:w-3/5 lg:justify-center lg:gap-2 xl:gap-4">
+            <div className="mt-8 flex h-full w-full flex-col gap-8 px-4 md:px-8 lg:mt-0 lg:w-3/5 lg:justify-center lg:gap-3 xl:gap-4">
               <div className="rounded-3xl bg-white/60 px-6 py-4 lg:order-3 lg:rounded-[50px] lg:px-8 2xl:py-6">
                 <KvParagraph>
                   <TextHighlight>
@@ -162,8 +162,8 @@ function ProfileSectionV2() {
                   <Info title="Ig" value="_elledianss" />
                 </div>
 
-                <div className="flex-1 space-y-2">
-                  <div className="text-2xl md:text-3xl">
+                <div className="flex-1 space-y-1 xl:space-y-2">
+                  <div className="text-2xl 2xl:text-3xl">
                     <div className="font-monotes text-red-custom">
                       Education Background
                     </div>
@@ -178,15 +178,15 @@ function ProfileSectionV2() {
                     major="Communication Arts<br> Broadcasting and Streaming Media"
                   />
 
-                  <div className="w-2/3 rounded-full bg-white/60 px-1 text-xl md:w-max lg:text-2xl xl:w-1/2">
+                  <div className="w-2/3 rounded-full bg-white/60 px-1 text-xl md:w-max lg:text-base xl:w-1/2 xl:text-2xl">
                     <span>Cum GPA :</span>
                     <span className="font-bold text-red-custom"> 3.89</span>
                   </div>
                 </div>
               </div>
 
-              <div className="relative mt-4 rounded-[2rem] bg-white/60 px-4 pb-6 pt-10 lg:mt-0 xl:mt-2">
-                <div className="absolute -top-[20px] left-0 w-full lg:-left-4 lg:top-6">
+              <div className="relative mt-4 rounded-[2rem] bg-white/60 px-4 pb-6 pt-10 lg:mt-0 lg:pb-3 xl:mt-2 xl:pb-6">
+                <div className="absolute -top-[20px] left-0 w-full lg:-left-4 lg:top-3 xl:top-6">
                   <div className="w-max rounded-full bg-pink-custom p-2">
                     <h3 className="text-3xl xl:text-4xl">
                       <span className="font-monotes uppercase">Hard Skill</span>
@@ -194,7 +194,7 @@ function ProfileSectionV2() {
                   </div>
                 </div>
 
-                <div className="lg:absolute lg:left-28 lg:top-5">
+                <div className="lg:absolute lg:left-28 lg:top-3.5 xl:top-5">
                   <img
                     src={hardSkillSet}
                     alt="Hard Skill Set"
@@ -202,7 +202,7 @@ function ProfileSectionV2() {
                   />
                 </div>
 
-                <div className="mt-4 lg:mt-14 xl:mt-16">
+                <div className="mt-4 lg:mt-9 xl:mt-16">
                   <p className="text-center text-xl md:text-xl xl:text-3xl">
                     painting, design, digital art, traditional art,
                     storyboarding
@@ -210,8 +210,8 @@ function ProfileSectionV2() {
                 </div>
               </div>
 
-              <div className="relative mt-4 rounded-[2rem] bg-white/60 px-4 pb-6 pt-10 lg:mt-0">
-                <div className="absolute -top-[20px] left-0 w-full lg:-left-4 lg:top-6">
+              <div className="relative mt-4 rounded-[2rem] bg-white/60 px-4 pb-6 pt-10 lg:mt-0 lg:pb-3 xl:pb-6">
+                <div className="absolute -top-[20px] left-0 w-full lg:-left-4 lg:top-3 xl:top-6">
                   <div className="w-max rounded-full bg-pink-custom p-2">
                     <h3 className="text-3xl xl:text-4xl">
                       <span className="font-monotes uppercase">Soft Skill</span>
@@ -219,7 +219,7 @@ function ProfileSectionV2() {
                   </div>
                 </div>
 
-                <div className="mt-2 lg:-mt-2 lg:ml-44 xl:ml-56">
+                <div className="mt-2 lg:-mt-6 lg:ml-44 xl:-mt-2 xl:ml-56">
                   <p className="text-center text-xl lg:text-left xl:text-3xl">
                     Creativity, collaboration, adaptability,
                     <br /> critical thinking, communication
@@ -310,7 +310,7 @@ function ProfileSectionV2() {
 
 const Education = ({ primary, major }: { primary: string; major: string }) => {
   return (
-    <div className="text-md font-light md:text-xl">
+    <div className="text-md font-light xl:text-xl">
       <div className="font-semibold">
         <p>{primary}</p>
       </div>
@@ -329,7 +329,7 @@ const Education = ({ primary, major }: { primary: string; major: string }) => {
 
 const Info = ({ title, value }: { title: string; value: string }) => {
   return (
-    <div className="text-md flex font-light md:text-xl xl:text-2xl">
+    <div className="text-md flex font-light xl:text-2xl">
       <p className="space-x-4">
         <span>{title}</span>
         {":"}
